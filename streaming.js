@@ -333,9 +333,9 @@ const streamingInfo = {
     groupName: 'Sport',
     sources: [
       {
-        url: 'https://cdnsv1.bunnycdncloud.com/dooball2you/bein1/playlist.m3u8',
+        url: 'https://dookeela.live/live-tv/bein1_617',
         suffix: 'HD',
-        options: { referer: 'https://dooball2you.com/' },
+        options: { referer: 'https://dookeela.live/' },
       },
     ],
   },
@@ -375,23 +375,23 @@ const streamingInfo = {
     groupName: 'Sport',
     sources: [
       {
-        url: 'https://cdnsv1.bunnycdncloud.com/dooball2you/tpf1/playlist.m3u8',
+        url: 'https://r3-sn-5fo-c37ed7.googleuservideo.com/ballhd24liv_e1/trueepl1_480p/playlist.m3u8',
         // suffix: 'HD',
-        options: { referer: 'https://dooball2you.com/' },
+        options: { referer: 'https://dooball.tv/' },
       },
     ],
   },
 
   premier2: {
     channelName: 'Premier 2',
-    logo: 'https://iptv36.vercel.app/logo/premier_hd1.png',
+    logo: 'https://iptv36.vercel.app/logo/premier_hd2.png',
     // tvgId: 'TruePremierFootball2.th',
     groupName: 'Sport',
     sources: [
       {
-        url: 'https://cdnsv1.bunnycdncloud.com/dooball2you/tpf2/playlist.m3u8',
+        url: 'https://dookeela.live/live-tv/epl2',
         // suffix: 'HD',
-        options: { referer: 'https://dooball2you.com/' },
+        options: { referer: 'https://dookeela.live/' },
       },
     ],
   },

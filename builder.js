@@ -64,7 +64,7 @@ const main = async () => {
       if (streamingInfo.options) {
         if (streamingInfo.options.referer) {
           channelStr += `\n#EXTVLCOPT:http-referrer=${streamingInfo.options.referer}`;
-          if (streamingInfo.options.referer === 'https://dooball2you.com/') isNeedAppendLicense = true;
+          if (streamingInfo.options.referer === 'https://dooball.tv/') isNeedAppendLicense = true;
         }
         if (streamingInfo.options.userAgent) {
           channelStr += `\n#EXTVLCOPT:http-user-agent=${streamingInfo.options.userAgent}`;
