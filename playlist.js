@@ -103,7 +103,7 @@ const channelListWithBackupChannel = [
 
 const playlistV2 = {
   filename: 'playlist-v2.m3u',
-  channelList: [...channelListWithBackupChannel, ['cartoonclub']],
+  channelList: [...channelListWithBackupChannel],
 };
 
 const playlistV3 = {
@@ -119,10 +119,14 @@ const playlistV3 = {
     ['premier1', 1],
     ['premier1', 2],
     ['premier1', 3],
+    ['premier1', 4],
+    ['premier1', 5],
     ['premier2'],
     ['premier2', 1],
     ['premier2', 2],
     ['premier2', 3],
+    ['premier2', 4],
+    ['premier2', 5],
     // ['premier3'],
     // ['premier4'],
     // ['truesportshd1'],
