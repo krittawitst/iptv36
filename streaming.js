@@ -3,8 +3,7 @@ const cheerio = require('cheerio');
 const get = require('lodash/get');
 
 const defaultUserAgent =
-  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0';
-const currentDatetimePlus7Hrs = new Date(new Date().getTime() + 7 * 60 * 60 * 1000);
+  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0';
 
 const streamingInfo = {
   nbt: {
@@ -244,13 +243,7 @@ const streamingInfo = {
     logo: 'https://iptv36.vercel.app/logo/amarin.png',
     // tvgId: 'Amarin34HD.th',
     sources: [
-      { url: 'https://cco-streamer1.cdn.3bbtv.com:8443/3bb/live/34/34.mpd', suffix: '3BB FHD' },
-      {
-        url: 'https://49-231-34-101-rewriter.ais-vidnt.com/ais/play/anevia/live/eds/B0017/DASH/B0017.mpd?playbackUrlPrefix=https%3A%2F%2Ftr.play-rbcdn.ais.co.th%3A8438%2F&originBasicUrl=http%3A%2F%2Fpl-origin.ais-vidnt.com%2Fais%2Fplay%2Fanevia&tt=1c6a2fd62e7b72b814b574eda6e9a2fe&chunkHttps=true&tmid=B0003&tpbk=LSns7pvhCfNGcR6Y&rrt=1738562618&tmod=rfk&rsid=641cc446-d69a-47f6-a541-413102a3cc14&tuid=uwBArnpAx%2Bl0ZsSr5YKY5WRspbalaoonO8fj9s7VEqPm9jZ6Yc22e4%2Bn%2Fqh3ZDG2poQTLYxWNqIVgz3ZzybbJRYxoCKRCAXvEsIjAJLONECn0%3D&cdn=redfox-https&tdid=91036df07abea77e7ec1a62aa4296220&origin=anevia&tfa=f0-fc&tttl=1738649018',
-        options: { referer: 'https://ais-vidnt.com/' },
-        suffix: 'AIS FHD',
-      },
-
+      { url: 'https://cco-streamer1.cdn.3bbtv.com:8443/3bb/live/34/34.mpd', suffix: 'FHD' },
       { url: 'https://edge6a.v2h-cdn.com/hd_amarin/hdamarin.stream/playlist.m3u8', suffix: 'HD' },
       {
         url: 'https://cdn1.googlecdn.live/4k/amarintv/playlist.m3u8',
@@ -370,9 +363,9 @@ const streamingInfo = {
   //   groupName: 'Sport',
   //   sources: [
   //     {
-  //       url: 'https://cdnsv1.bunnycdncloud.com/dooball2you/bein2/playlist.m3u8',
-  //       suffix: 'HD',
-  //       options: { referer: 'https://dooball2you.com/' },
+  //       url: 'https://49-231-34-101-rewriter.ais-vidnt.com/ais/play/anevia/live/eds/S0002/DASH/S0002.mpd?playbackUrlPrefix=https%3A%2F%2Ftr.play-rbcdn.ais.co.th%3A8438%2F&originBasicUrl=http%3A%2F%2Fpl-origin.ais-vidnt.com%2Fais%2Fplay%2Fanevia&tt=1c6a2fd62e7b72b814b574eda6e9a2fe&chunkHttps=true&tmid=B0003&tpbk=LSns7pvhCfNGcR6Y&rrt=1738562618&tmod=rfk&rsid=641cc446-d69a-47f6-a541-413102a3cc14&tuid=uwBArnpAx%2Bl0ZsSr5YKY5WRspbalaoonO8fj9s7VEqPm9jZ6Yc22e4%2Bn%2Fqh3ZDG2poQTLYxWNqIVgz3ZzybbJRYxoCKRCAXvEsIjAJLONECn0%3D&cdn=redfox-https&tdid=91036df07abea77e7ec1a62aa4296220&origin=anevia&tfa=f0-fc&tttl=1738649018',
+  //       suffix: 'AIS FHD',
+  //       // options: { referer: 'https://dooball2you.com/' },
   //     },
   //   ],
   // },
@@ -383,6 +376,11 @@ const streamingInfo = {
     // tvgId: 'beINSports3Thailand.th',
     groupName: 'Sport',
     sources: [
+      {
+        url: 'https://cdn-stream.lnwza007.com/ballmun/sd6/chunks.m3u8',
+        suffix: 'LNW HD',
+        // options: { referer: 'https://live-demo.iamtheme.com/' },
+      },
       {
         url: 'https://switch.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-7/playlist.m3u8',
         suffix: 'Switch',
@@ -407,6 +405,10 @@ const streamingInfo = {
     // tvgId: 'TruePremierFootball1.th',
     groupName: 'Sport',
     sources: [
+      {
+        url: 'https://r3-sn-5fo-c37ed248.googleuservideo.com:8443/Premier1_720/tracks-v1a1/mono.m3u8?token=c2VydmVyX3RpbWU9MTAvMTYvMjAyNCAwMTozODo0OCBBTSZoYXNoX3ZhbHVlPXNNOURSekVJZDhSSTFJTzdYRVd2bVE9PSZ2YWxpZG1pbnV0ZXM9NSZzdHJtX2xlbj0wJmlkPXdlYi0xMzg1NzU=',
+        suffix: 'Mono FHD',
+      },
       {
         url: 'http://202.62.56.28:8080/nl.m3u8?id=1061',
         suffix: '.28 EN FHD',
@@ -452,6 +454,11 @@ const streamingInfo = {
     groupName: 'Sport',
     sources: [
       {
+        url: 'http://202.62.56.28:8080/nl.m3u8?id=1065',
+        suffix: '.28 EN FHD',
+        // options: { referer: 'https://soccertv4k.com/' },
+      },
+      {
         url: 'https://cdn1.googlecdn.live/4k/epl2/playlist.m3u8',
         suffix: 'SoccerTV HD',
         options: { referer: 'https://soccertv4k.com/' },
@@ -481,9 +488,14 @@ const streamingInfo = {
     groupName: 'Sport',
     sources: [
       {
-        url: 'https://cdnsv1.bunnycdncloud.com/dooball2you/tpf3/playlist.m3u8',
-        // suffix: 'HD',
-        options: { referer: 'https://dooball2you.com/' },
+        url: 'https://switch.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-3/playlist.m3u8',
+        suffix: 'Switch',
+        options: { referer: 'https://live-demo.iamtheme.com/' },
+      },
+      {
+        url: 'https://oral.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-3/playlist.m3u8',
+        suffix: 'Oral',
+        options: { referer: 'https://live-demo.iamtheme.com/' },
       },
     ],
   },
@@ -495,26 +507,36 @@ const streamingInfo = {
     groupName: 'Sport',
     sources: [
       {
-        url: 'https://cdnsv1.bunnycdncloud.com/dooball2you/tpf4/playlist.m3u8',
-        // suffix: 'HD',
-        options: { referer: 'https://dooball2you.com/' },
+        url: 'https://switch.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-4/playlist.m3u8',
+        suffix: 'Switch',
+        options: { referer: 'https://live-demo.iamtheme.com/' },
+      },
+      {
+        url: 'https://oral.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-4/playlist.m3u8',
+        suffix: 'Oral',
+        options: { referer: 'https://live-demo.iamtheme.com/' },
       },
     ],
   },
 
-  // premier5: {
-  //   channelName: 'Premier 5',
-  //   logo: 'https://iptv36.vercel.app/logo/premier_hd5.png',
-  //   // tvgId: 'TruePremierFootball5.th',
-  //   groupName: 'Sport',
-  //   sources: [
-  //     {
-  //       url: 'https://cdnsv1.bunnycdncloud.com/dooball2you/tpf5/playlist.m3u8',
-  //       // suffix: 'HD',
-  //       options: { referer: 'https://dooball2you.com/' },
-  //     },
-  //   ],
-  // },
+  premier5: {
+    channelName: 'Premier 5',
+    logo: 'https://iptv36.vercel.app/logo/premier_hd5.png',
+    // tvgId: 'TruePremierFootball5.th',
+    groupName: 'Sport',
+    sources: [
+      {
+        url: 'https://switch.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-5/playlist.m3u8',
+        suffix: 'Switch',
+        options: { referer: 'https://live-demo.iamtheme.com/' },
+      },
+      {
+        url: 'https://oral.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-5/playlist.m3u8',
+        suffix: 'Oral',
+        options: { referer: 'https://live-demo.iamtheme.com/' },
+      },
+    ],
+  },
 
   truesportshd1: {
     channelName: 'True Sports 1',
@@ -522,9 +544,8 @@ const streamingInfo = {
     groupName: 'Sport',
     sources: [
       {
-        url: 'https://cdnsv1.bunnycdncloud.com/dooball2you/truesporthd1/playlist.m3u8',
-        suffix: 'FHD',
-        options: { referer: 'https://dooball2you.com/' },
+        url: 'https://dolive.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-8/playlist.m3u8',
+        options: { referer: 'https://live-demo.iamtheme.com/' },
       },
     ],
   },
@@ -535,9 +556,8 @@ const streamingInfo = {
     groupName: 'Sport',
     sources: [
       {
-        url: 'https://cdnsv1.bunnycdncloud.com/dooball2you/truesporthd2/playlist.m3u8',
-        suffix: 'HD',
-        options: { referer: 'https://dooball2you.com/' },
+        url: 'https://dolive.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-9/playlist.m3u8',
+        options: { referer: 'https://live-demo.iamtheme.com/' },
       },
     ],
   },
@@ -734,10 +754,9 @@ const testUrl = async (url, options = {}) => {
   // list of url that always not check on Vercel
   if (
     process.env.VERCEL &&
-    (url.includes('huaweicdncloud.com') || // Geo Restrict
-      url.includes('ch7.com') || // Geo Restrict
+    (url.includes('ch7.com') || // Geo Restrict
       url.includes('cdn.mcot.net') || // Geo Restrict
-      url.includes('pptv36-1tsjfj.cdn.byteark.com') || // Geo Restrict
+      url.includes('pptv36-1tsjfj.cdn.byteark.com') || // Geo Restrictt
       url.includes('thaim3u.com') ||
       url.includes('3bb.co.th') ||
       url.includes('3bbtv.com') ||
