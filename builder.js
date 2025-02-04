@@ -16,11 +16,7 @@ const main = async () => {
   }
 
   // dynamically add streaming url
-  // await streaming.dynamicallyAddStreamingUrlFromDailyMotion();
   await streaming.dynamicallyAddStreamingUrlFromPPTV();
-  // await streaming.dynamicallyAddStreamingUrlFromByteArkNextData();
-  const db66LicenseKey = await streaming.getDb66License();
-  console.log(`db66LicenseKey = ${db66LicenseKey}`);
 
   // remember all active channel key to build epg
   let allActiveChannelKey = [];
@@ -60,24 +56,16 @@ const main = async () => {
       }" tvg-logo="${streamingInfo.logo}",${channelName}`;
 
       // add option #EXTVLCOPT
-      let isNeedAppendLicense = false;
       if (streamingInfo.options) {
         if (streamingInfo.options.referer) {
           channelStr += `\n#EXTVLCOPT:http-referrer=${streamingInfo.options.referer}`;
-          if (streamingInfo.options.referer === 'https://dooball.tv/') isNeedAppendLicense = true;
         }
         if (streamingInfo.options.userAgent) {
           channelStr += `\n#EXTVLCOPT:http-user-agent=${streamingInfo.options.userAgent}`;
         }
       }
 
-      // add license
-      if (isNeedAppendLicense && db66LicenseKey !== '') {
-        channelStr += `\n${streamingInfo.url}?wmsAuthSign=${db66LicenseKey}\n\n`;
-      } else {
-        channelStr += `\n${streamingInfo.url}\n\n`;
-      }
-
+      channelStr += `\n${streamingInfo.url}\n\n`;
       textStr = textStr + `${channelStr}`;
     }
 

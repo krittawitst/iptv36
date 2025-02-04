@@ -188,6 +188,7 @@ const streamingInfo = {
     sources: [
       { url: 'https://cco-streamer1.cdn.3bbtv.com:8443/3bb/live/30/30.mpd', suffix: 'FHD' },
       { url: 'https://live-org-01-cdn.mcot.net/mcothd1080p_edge/smil:mcothd1080p.smil/playlist.m3u8', suffix: 'FHD' },
+      { url: 'https://lb-mvtv-live.v2h-cdn.com/redirect/mcothd/mcothd.stream?type=m3u8', suffix: 'HD' },
     ],
   },
 
@@ -258,12 +259,6 @@ const streamingInfo = {
     sources: [
       { url: 'https://cco-streamer1.cdn.3bbtv.com:8443/3bb/live/36/36.mpd', suffix: 'FHD' },
       { url: 'https://edge6a.v2h-cdn.com/hd_pptv/hd_pptv.stream/playlist.m3u8', suffix: 'HD' },
-
-      {
-        url: 'https://cdnsv1.bunnycdncloud.com/dooball2you/pptv/playlist.m3u8',
-        suffix: 'HD',
-        options: { referer: 'https://dooball2you.com/' },
-      },
     ],
   },
 
@@ -333,9 +328,14 @@ const streamingInfo = {
     groupName: 'Sport',
     sources: [
       {
-        url: 'https://dookeela.live/live-tv/bein1_617',
-        suffix: 'HD',
-        options: { referer: 'https://dookeela.live/' },
+        url: 'https://switch.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-6/playlist.m3u8',
+        // suffix: 'HD',
+        options: { referer: 'https://live-demo.iamtheme.com/' },
+      },
+      {
+        url: 'https://oral.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-6/playlist.m3u8',
+        // suffix: 'HD',
+        options: { referer: 'https://live-demo.iamtheme.com/' },
       },
     ],
   },
@@ -361,9 +361,14 @@ const streamingInfo = {
     groupName: 'Sport',
     sources: [
       {
-        url: 'https://cdnsv1.bunnycdncloud.com/dooball2you/bein3/playlist.m3u8',
-        suffix: 'HD',
-        options: { referer: 'https://dooball2you.com/' },
+        url: 'https://switch.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-7/playlist.m3u8',
+        // suffix: 'HD',
+        options: { referer: 'https://live-demo.iamtheme.com/' },
+      },
+      {
+        url: 'https://oral.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-7/playlist.m3u8',
+        // suffix: 'HD',
+        options: { referer: 'https://live-demo.iamtheme.com/' },
       },
     ],
   },
@@ -375,9 +380,24 @@ const streamingInfo = {
     groupName: 'Sport',
     sources: [
       {
-        url: 'https://r3-sn-5fo-c37ed7.googleuservideo.com/ballhd24liv_e1/trueepl1_480p/playlist.m3u8',
+        url: 'https://switch.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-1/playlist.m3u8',
         // suffix: 'HD',
-        options: { referer: 'https://dooball.tv/' },
+        options: { referer: 'https://live-demo.iamtheme.com/' },
+      },
+      {
+        url: 'https://oral.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-1/playlist.m3u8',
+        // suffix: 'HD',
+        options: { referer: 'https://live-demo.iamtheme.com/' },
+      },
+      {
+        url: 'https://cdn1.googlecdn.live/4k/pfc/playlist.m3u8',
+        // suffix: 'HD',
+        options: { referer: 'https://soccertv4k.com/' },
+      },
+      {
+        url: 'https://cdn1.googlecdn.live/4k/premiersports1uk/playlist.m3u8',
+        suffix: 'UK HD',
+        options: { referer: 'https://soccertv4k.com/' },
       },
     ],
   },
@@ -389,9 +409,24 @@ const streamingInfo = {
     groupName: 'Sport',
     sources: [
       {
-        url: 'https://dookeela.live/live-tv/epl2',
+        url: 'https://switch.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-2/playlist.m3u8',
         // suffix: 'HD',
-        options: { referer: 'https://dookeela.live/' },
+        options: { referer: 'https://live-demo.iamtheme.com/' },
+      },
+      {
+        url: 'https://oral.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-2/playlist.m3u8',
+        // suffix: 'HD',
+        options: { referer: 'https://live-demo.iamtheme.com/' },
+      },
+      {
+        url: 'https://cdn1.googlecdn.live/4k/pfc2/playlist.m3u8',
+        // suffix: 'HD',
+        options: { referer: 'https://soccertv4k.com/' },
+      },
+      {
+        url: 'https://cdn1.googlecdn.live/4k/premiersports2uk/playlist.m3u8',
+        suffix: 'UK HD',
+        options: { referer: 'https://soccertv4k.com/' },
       },
     ],
   },
@@ -642,26 +677,9 @@ const dynamicallyAddStreamingUrlFromPPTV = async () => {
   }
 };
 
-const getDb66License = async () => {
-  console.log('Getting db66 license...');
-
-  let licenseKey = '';
-  try {
-    const endpoint = `https://license.dooball66.xyz?_=${new Date().getTime()}`;
-    const response = await axios.get(endpoint);
-    data = response.data;
-    licenseKey = data.license;
-  } catch (error) {
-    console.error(`Cannot get license key`);
-    console.error(error);
-  }
-
-  return licenseKey;
-};
-
 const testUrl = async (url, options = {}) => {
   // list of url that we will always not check
-  if (url.includes('rtsp://') || url.includes('akamaiz.com') || url.includes('bunnycdncloud')) {
+  if (url.includes('rtsp://') || url.includes('akamaiz.com') || url.includes('googlecdn.live')) {
     return true;
   }
 
@@ -785,5 +803,4 @@ module.exports = {
   dynamicallyAddStreamingUrlFromDailyMotion,
   dynamicallyAddStreamingUrlFromPPTV,
   dynamicallyAddStreamingUrlFromByteArkNextData,
-  getDb66License,
 };
