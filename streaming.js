@@ -84,7 +84,6 @@ const streamingInfo = {
       {
         url: 'https://oral.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/tnn24_1080p/playlist.m3u8',
         options: { referer: 'https://live-demo.iamtheme.com/' },
-        suffix: 'Thai M3U',
       },
       { url: 'https://lb-mvtv-live.v2h-cdn.com/redirect/tnn24/tnn24.stream?type=m3u8' },
     ],
@@ -95,14 +94,9 @@ const streamingInfo = {
     logo: 'https://iptv36.vercel.app/logo/jkn18.png',
     // tvgId: 'JKN18.th',
     sources: [
-      {
-        url: 'https://cdn1.googlecdn.live/4k/jkn18/playlist.m3u8',
-        suffix: 'SoccerTV',
-        options: { referer: 'https://soccertv4k.com/' },
-      },
       { url: 'https://edge2a.v2h-cdn.com/jkn18/jkn18.stream/playlist.m3u8' },
       // { url: 'https://lb-mvtv-live.v2h-cdn.com/redirect/new/new.stream?type=m3u8' },
-      // { url: 'https://live.topnews.co.th/hls/topnews_a_720.m3u8', suffix: 'HD' },
+      { url: 'https://live.topnews.co.th/hls/topnews_a_720.m3u8', suffix: 'Top News HD', priority: 9 },
     ],
   },
 
@@ -250,7 +244,7 @@ const streamingInfo = {
       { url: 'https://cco-streamer1.cdn.3bbtv.com:8443/3bb/live/33/33.mpd', suffix: 'FHD' },
       {
         url: 'https://cdn1.googlecdn.live/4k/ch3hd/playlist.m3u8',
-        suffix: 'SoccerTV FHD',
+        suffix: 'FHD',
         options: { referer: 'https://soccertv4k.com/' },
       },
       { url: 'https://edge6a.v2h-cdn.com/hd_3/hd3.stream/playlist.m3u8', suffix: 'HD' },
@@ -368,15 +362,17 @@ const streamingInfo = {
     groupName: 'Sport',
     sources: [
       {
-        url: 'https://cdnsv1.bunnycdncloud.com/andaman888th/bein1/playlist.m3u8',
-        suffix: 'Bunny',
-        options: { referer: 'https://www.andaman888th.com/' },
-      },
-      {
         url: 'https://oral.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-6/playlist.m3u8',
         // url: 'https://switch.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-6/playlist.m3u8',
         suffix: 'ThaiM3U',
         options: { referer: 'https://live-demo.iamtheme.com/' },
+        priority: 11,
+      },
+      {
+        url: 'https://cdnsv1.bunnycdncloud.com/andaman888th/bein1/playlist.m3u8',
+        suffix: 'Bunny',
+        options: { referer: 'https://www.andaman888th.com/' },
+        priority: 10,
       },
       {
         url: 'https://cdn1.googlecdn.live/4k/bein1/playlist.m3u8',
@@ -413,6 +409,13 @@ const streamingInfo = {
     groupName: 'Sport',
     sources: [
       {
+        url: 'https://switch.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-7/playlist.m3u8',
+        // url: 'https://oral.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-7/playlist.m3u8',
+        suffix: 'ThaiM3U HD',
+        options: { referer: 'https://live-demo.iamtheme.com/' },
+        priority: 21,
+      },
+      {
         url: 'https://fw4free.inwstream.com/fw4free/bein3.stream/playlist.m3u8',
         suffix: 'inw HD',
         options: { referer: 'https://fw4free.com/' },
@@ -422,18 +425,12 @@ const streamingInfo = {
         suffix: 'Bunny',
         options: { referer: 'https://www.andaman888th.com/' },
       },
-      {
-        url: 'https://switch.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-7/playlist.m3u8',
-        // url: 'https://oral.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-7/playlist.m3u8',
-        suffix: 'ThaiM3U',
-        options: { referer: 'https://live-demo.iamtheme.com/' },
-      },
-      {
-        url: 'https://cdn-stream.lnwza007.com/ballmun/sd6/chunks.m3u8',
-        suffix: 'lnwza Delay HD',
-        // options: { referer: 'https://live-demo.iamtheme.com/' },
-        priority: 9,
-      },
+      // {
+      //   url: 'https://cdn-stream.lnwza007.com/ballmun/sd6/chunks.m3u8',
+      //   suffix: 'lnwza Delay HD',
+      //   // options: { referer: 'https://live-demo.iamtheme.com/' },
+      //   priority: 9,
+      // },
     ],
   },
 
@@ -455,7 +452,7 @@ const streamingInfo = {
       },
       {
         url: 'https://cdn1.googlecdn.live/4k/epl1_sd/playlist.m3u8',
-        suffix: 'SoccerTV HD',
+        suffix: 'SoccerTV Delay HD',
         options: { referer: 'https://soccertv4k.com/' },
       },
       {
@@ -465,7 +462,7 @@ const streamingInfo = {
       },
       {
         url: 'https://playtvthai.github.io/m3u8/sports/epl1.m3u8',
-        suffix: 'PlayTV HD',
+        suffix: 'PlayTV Delay HD',
         // options: { referer: 'https://soccertv4k.com/' },
       },
       {
@@ -594,18 +591,19 @@ const streamingInfo = {
     groupName: 'Sport',
     sources: [
       {
+        url: 'https://cdnsv1.bunnycdncloud.com/andaman888th/truesporthd1/playlist.m3u8',
+        options: { referer: 'https://www.andaman888th.com/' },
+        suffix: 'Bunny FHD',
+      },
+      {
         url: 'https://cdn1.googlecdn.live/4k/tsp1/playlist.m3u8',
-        suffix: 'SoccerTV FHD',
         options: { referer: 'https://soccertv4k.com/' },
+        suffix: 'SoccerTV FHD',
       },
       {
         url: 'https://dolive.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-8/playlist.m3u8',
         options: { referer: 'https://live-demo.iamtheme.com/' },
-      },
-      {
-        url: 'https://cdnsv1.bunnycdncloud.com/andaman888th/truesporthd1/playlist.m3u88',
-        suffix: 'Bunny FHD',
-        options: { referer: 'https://www.andaman888th.com/' },
+        suffix: 'ThaiM3U',
       },
     ],
   },
@@ -616,18 +614,19 @@ const streamingInfo = {
     groupName: 'Sport',
     sources: [
       {
-        url: 'https://cdnsv1.bunnycdncloud.com/andaman888th/truesporthd1/playlist.m3u8',
-        suffix: 'Bunny FHD',
+        url: 'https://cdnsv1.bunnycdncloud.com/andaman888th/truesporthd2/playlist.m3u8',
         options: { referer: 'https://www.andaman888th.com/' },
+        suffix: 'Bunny FHD',
       },
       {
         url: 'https://cdn1.googlecdn.live/4k/tsp2/playlist.m3u8',
-        suffix: 'SoccerTV HD',
         options: { referer: 'https://soccertv4k.com/' },
+        suffix: 'SoccerTV HD',
       },
       {
         url: 'https://dolive.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-9/playlist.m3u8',
         options: { referer: 'https://live-demo.iamtheme.com/' },
+        suffix: 'ThaiM3U',
       },
     ],
   },

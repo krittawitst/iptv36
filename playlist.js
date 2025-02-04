@@ -95,10 +95,12 @@ const channelListWithBackupChannel = [
   ['amarin', 1],
   ['ch7'],
   ['ch7', 1],
+  ['ch7', 2],
 
   // 41-42
   ['pptv'],
   ['pptv', 1],
+  ['pptv', 2],
 ];
 
 const playlistV2 = {
@@ -115,7 +117,7 @@ const playlistV3 = {
     ['bein1', 1],
     ['bein1', 2],
     ['bein2'],
-    ['bein2', 2],
+    ['bein2', 1],
     ['bein3'],
     ['bein3', 1],
     ['bein3', 2],
