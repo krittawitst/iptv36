@@ -80,7 +80,12 @@ const streamingInfo = {
     // tvgId: 'TNN16.th',
     sources: [
       // { url: 'https://iptv36.vercel.app/api/true.m3u8?channel=tnn16', suffix: 'HD' },
-      { url: 'https://edge6a.v2h-cdn.com/tnn24/tnn24.stream/playlist.m3u8' },
+      // { url: 'https://edge6a.v2h-cdn.com/tnn24/tnn24.stream/playlist.m3u8' },
+      {
+        url: 'https://oral.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/tnn24_1080p/playlist.m3u8',
+        options: { referer: 'https://live-demo.iamtheme.com/' },
+        suffix: 'Thai M3U',
+      },
       { url: 'https://lb-mvtv-live.v2h-cdn.com/redirect/tnn24/tnn24.stream?type=m3u8' },
     ],
   },
@@ -90,8 +95,13 @@ const streamingInfo = {
     logo: 'https://iptv36.vercel.app/logo/jkn18.png',
     // tvgId: 'JKN18.th',
     sources: [
+      {
+        url: 'https://cdn1.googlecdn.live/4k/jkn18/playlist.m3u8',
+        suffix: 'SoccerTV',
+        options: { referer: 'https://soccertv4k.com/' },
+      },
       { url: 'https://edge2a.v2h-cdn.com/jkn18/jkn18.stream/playlist.m3u8' },
-      { url: 'https://lb-mvtv-live.v2h-cdn.com/redirect/new/new.stream?type=m3u8' },
+      // { url: 'https://lb-mvtv-live.v2h-cdn.com/redirect/new/new.stream?type=m3u8' },
       // { url: 'https://live.topnews.co.th/hls/topnews_a_720.m3u8', suffix: 'HD' },
     ],
   },
@@ -238,6 +248,11 @@ const streamingInfo = {
     // tvgId: 'Channel3.th',
     sources: [
       { url: 'https://cco-streamer1.cdn.3bbtv.com:8443/3bb/live/33/33.mpd', suffix: 'FHD' },
+      {
+        url: 'https://cdn1.googlecdn.live/4k/ch3hd/playlist.m3u8',
+        suffix: 'SoccerTV FHD',
+        options: { referer: 'https://soccertv4k.com/' },
+      },
       { url: 'https://edge6a.v2h-cdn.com/hd_3/hd3.stream/playlist.m3u8', suffix: 'HD' },
     ],
   },
@@ -263,6 +278,11 @@ const streamingInfo = {
     sources: [
       { url: 'https://live-cdn-hwc.ch7.com/livech7hd/HD_1080p.m3u8?vhost=streaming-hwc.ch7.com', suffix: 'FHD' },
       { url: 'https://cco-streamer1.cdn.3bbtv.com:8443/3bb/live/35/35.mpd', suffix: 'FHD' },
+      {
+        url: 'https://cdn1.googlecdn.live/4k/ch7hd/playlist.m3u8',
+        suffix: 'SoccerTV FHD',
+        options: { referer: 'https://soccertv4k.com/' },
+      },
       { url: 'https://edge6a.v2h-cdn.com/hd_7/hd7.stream/playlist.m3u8', suffix: 'HD' },
     ],
   },
@@ -273,6 +293,11 @@ const streamingInfo = {
     // tvgId: 'PPTVHD36.th',
     sources: [
       { url: 'https://cco-streamer1.cdn.3bbtv.com:8443/3bb/live/36/36.mpd', suffix: 'FHD' },
+      {
+        url: 'https://cdn1.googlecdn.live/4k/pptv/playlist.m3u8',
+        suffix: 'FHD',
+        options: { referer: 'https://soccertv4k.com/' },
+      },
       { url: 'https://edge6a.v2h-cdn.com/hd_pptv/hd_pptv.stream/playlist.m3u8', suffix: 'HD' },
     ],
   },
@@ -373,6 +398,11 @@ const streamingInfo = {
         suffix: 'SoccerTV FHD',
         options: { referer: 'https://soccertv4k.com/' },
       },
+      {
+        url: 'https://fw4free.inwstream.com/fw4free/bein2.stream/playlist.m3u8',
+        suffix: 'inw HD',
+        options: { referer: 'https://fw4free.com/' },
+      },
     ],
   },
 
@@ -382,6 +412,11 @@ const streamingInfo = {
     // tvgId: 'beINSports3Thailand.th',
     groupName: 'Sport',
     sources: [
+      {
+        url: 'https://fw4free.inwstream.com/fw4free/bein3.stream/playlist.m3u8',
+        suffix: 'inw HD',
+        options: { referer: 'https://fw4free.com/' },
+      },
       {
         url: 'https://cdnsv1.bunnycdncloud.com/andaman888th/bein3/playlist.m3u8',
         suffix: 'Bunny',
@@ -395,7 +430,7 @@ const streamingInfo = {
       },
       {
         url: 'https://cdn-stream.lnwza007.com/ballmun/sd6/chunks.m3u8',
-        suffix: 'LNW HD Delay',
+        suffix: 'lnwza Delay HD',
         // options: { referer: 'https://live-demo.iamtheme.com/' },
         priority: 9,
       },
@@ -425,13 +460,18 @@ const streamingInfo = {
       },
       {
         url: 'https://cdn-stream.lnwza007.com/ballmun/sd1/chunks.m3u8',
-        suffix: 'LNW HD',
+        suffix: 'lnwza HD',
         // options: { referer: 'https://soccertv4k.com/' },
       },
       {
         url: 'https://playtvthai.github.io/m3u8/sports/epl1.m3u8',
         suffix: 'PlayTV HD',
         // options: { referer: 'https://soccertv4k.com/' },
+      },
+      {
+        url: 'https://fw4free.inwstream.com/fw4free/ch1.stream/playlist.m3u8',
+        suffix: 'inw HD',
+        options: { referer: 'https://fw4free.com/' },
       },
       {
         url: 'https://oral.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-1/playlist.m3u8',
@@ -461,13 +501,18 @@ const streamingInfo = {
       },
       {
         url: 'https://cdn1.googlecdn.live/4k/epl2/playlist.m3u8',
-        suffix: 'SoccerTV HD',
+        suffix: 'SoccerTV FHD',
         options: { referer: 'https://soccertv4k.com/' },
       },
       {
         url: 'https://playtvthai.github.io/m3u8/sports/epl2.m3u8',
         suffix: 'PlayTV HD',
         // options: { referer: 'https://soccertv4k.com/' },
+      },
+      {
+        url: 'https://fw4free.inwstream.com/fw4free/ch2.stream/playlist.m3u8',
+        suffix: 'inw HD',
+        options: { referer: 'https://fw4free.com/' },
       },
       {
         // url: 'https://oral.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-2/playlist.m3u8',
@@ -549,6 +594,11 @@ const streamingInfo = {
     groupName: 'Sport',
     sources: [
       {
+        url: 'https://cdn1.googlecdn.live/4k/tsp1/playlist.m3u8',
+        suffix: 'SoccerTV FHD',
+        options: { referer: 'https://soccertv4k.com/' },
+      },
+      {
         url: 'https://dolive.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-8/playlist.m3u8',
         options: { referer: 'https://live-demo.iamtheme.com/' },
       },
@@ -566,13 +616,18 @@ const streamingInfo = {
     groupName: 'Sport',
     sources: [
       {
-        url: 'https://dolive.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-9/playlist.m3u8',
-        options: { referer: 'https://live-demo.iamtheme.com/' },
+        url: 'https://cdnsv1.bunnycdncloud.com/andaman888th/truesporthd1/playlist.m3u8',
+        suffix: 'Bunny FHD',
+        options: { referer: 'https://www.andaman888th.com/' },
       },
       {
-        url: 'https://cdnsv1.bunnycdncloud.com/andaman888th/truesporthd1/playlist.m3u8',
-        suffix: 'Bunny',
-        options: { referer: 'https://www.andaman888th.com/' },
+        url: 'https://cdn1.googlecdn.live/4k/tsp2/playlist.m3u8',
+        suffix: 'SoccerTV HD',
+        options: { referer: 'https://soccertv4k.com/' },
+      },
+      {
+        url: 'https://dolive.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-9/playlist.m3u8',
+        options: { referer: 'https://live-demo.iamtheme.com/' },
       },
     ],
   },
@@ -751,6 +806,7 @@ const testUrl = async (url, options = {}) => {
     url.includes('akamaiz.com') ||
     url.includes('googlecdn.live') ||
     url.includes('lnwza007.com') ||
+    url.includes('inwstream.com') ||
     url.includes('bunnycdncloud.com')
   ) {
     return true;
