@@ -614,14 +614,14 @@ const streamingInfo = {
     groupName: 'Sport',
     sources: [
       {
-        url: 'https://cdnsv1.bunnycdncloud.com/andaman888th/truesporthd2/playlist.m3u8',
-        options: { referer: 'https://www.andaman888th.com/' },
-        suffix: 'Bunny FHD',
-      },
-      {
         url: 'https://cdn1.googlecdn.live/4k/tsp2/playlist.m3u8',
         options: { referer: 'https://soccertv4k.com/' },
         suffix: 'SoccerTV HD',
+      },
+      {
+        url: 'https://cdnsv1.bunnycdncloud.com/andaman888th/truesporthd2/playlist.m3u8',
+        options: { referer: 'https://www.andaman888th.com/' },
+        suffix: 'Bunny',
       },
       {
         url: 'https://dolive.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-9/playlist.m3u8',

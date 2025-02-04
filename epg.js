@@ -127,12 +127,12 @@ const getEpgDataFromAisPlay = async () => {
     // '5a52f069aae731507f5387bb': 'cartoonnetwork',
     // '5d424cdbaae73145f7f2b675': 'toonee',
     // '5ee1ecafb544d498b9d1d2e8': 'nickelodeon',
-    '597d21477ed5a24e46f67258': 'cartoonclub',
+    // '597d21477ed5a24e46f67258': 'cartoonclub',
     // '5e6215e6d817de33506cedf7': 'discoveryasia',
     '597dfea47ed5a24e46f67259': 'boomerang',
-    '5967375cbf6aee05dcdfc126': 'tvb',
+    // '5967375cbf6aee05dcdfc126': 'tvb',
     // '597fff9d7ed5a20c8ae865d9': 'mangkorn',
-    '6501774d8ffee1f226fe8300': 'samrujlok',
+    // '6501774d8ffee1f226fe8300': 'samrujlok',
   };
 
   // build parameter
@@ -197,7 +197,7 @@ const getEpgDataFromTrueId = async () => {
     truepremierfootballhd3: 'premier3',
     truepremierfootballhd4: 'premier4',
     truepremierfootballhd5: 'premier5',
-    'hybrid-truesport-hd': 'truesportshd1',
+    'truesport-hd': 'truesportshd1',
     'truesport-hd-2': 'truesportshd2',
   };
 
