@@ -147,7 +147,6 @@ const playlistV3 = {
     ['truesportshd2', 2],
 
     ['lovenature'],
-    ['boomerang'],
   ],
 };
 

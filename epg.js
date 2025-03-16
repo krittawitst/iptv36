@@ -203,38 +203,40 @@ const getEpgDataFromTrueId = async () => {
 
   // send request
   const allPageProps = await Promise.all(
-    Object.keys(channelSlugToChannelKey).map(async (channelSlug) => {
-      try {
-        const epgUrl = `https://tv.trueid.net/th-th/live/${channelSlug}`;
-        const response = await axios.get(epgUrl);
-        if (response.status === 200) {
-          const $ = cheerio.load(response.data);
-          const nextData = $('#__NEXT_DATA__').html();
-          const data = JSON.parse(nextData);
-          if (!data || !data.props || !data.props.pageProps) {
-            return null;
+    Object.keys(channelSlugToChannelKey)
+      .map(async (channelSlug) => {
+        try {
+          const epgUrl = `https://tv.trueid.net/th-th/live/${channelSlug}`;
+          const response = await axios.get(epgUrl);
+          if (response.status === 200) {
+            const $ = cheerio.load(response.data);
+            const nextData = $('#__NEXT_DATA__').html();
+            const data = JSON.parse(nextData);
+            if (!data || !data.props || !data.props.pageProps) {
+              return null;
+            }
+            return data.props.pageProps;
           }
-          return data.props.pageProps;
+          return null;
+        } catch (error) {
+          if (error.response) {
+            // The request was made and the server responded with a status code
+            // that falls out of the range of 2xx
+            console.log(
+              `trueid_epg response error on ${channelSlug} => ${error.response.status}: ${error.response.data}`
+            );
+          } else if (error.request) {
+            // The request was made but no response was received
+            // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+            // http.ClientRequest in node.js
+            console.log(error.request);
+          } else {
+            // Something happened in setting up the request that triggered an Error
+            console.log('Error', error.message);
+          }
         }
-        return null;
-      } catch (error) {
-        if (error.response) {
-          // The request was made and the server responded with a status code
-          // that falls out of the range of 2xx
-          console.log(
-            `trueid_epg response error on ${channelSlug} => ${error.response.status}: ${error.response.data}`
-          );
-        } else if (error.request) {
-          // The request was made but no response was received
-          // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
-          // http.ClientRequest in node.js
-          console.log(error.request);
-        } else {
-          // Something happened in setting up the request that triggered an Error
-          console.log('Error', error.message);
-        }
-      }
-    })
+      })
+      .filter((a) => a !== null && a !== undefined)
   );
 
   // process data
