@@ -8,7 +8,7 @@ const defaultUserAgent =
 const streamingInfo = {
   nbt: {
     channelName: 'NBT',
-    logo: 'https://iptv36.vercel.app/logo/nbt.png?v=2',
+    logo: 'https://iptv36.vercel.app/logo/nbt.png',
     // tvgId: 'NBT2.th',
     sources: [
       {
@@ -222,7 +222,7 @@ const streamingInfo = {
     logo: 'https://iptv36.vercel.app/logo/thairath.png',
     // tvgId: 'ThairathTV32.th',
     sources: [
-      { url: 'https://cco-streamer2.cdn.3bbtv.com:8443/3bb/live/32/32.mpd', suffix: 'FHD' },
+      // { url: 'https://cco-streamer3.cdn.3bbtv.com:8443/3bb/live/32/32.mpd', suffix: 'FHD' },
       // {
       //   url: 'https://cdn1.googlecdn.live/4k/thairathtv/playlist.m3u8',
       //   options: { referer: 'https://soccertv4k.com/' },
@@ -276,7 +276,7 @@ const streamingInfo = {
         suffix: 'FHD',
         options: { referer: 'https://www.ch7.com/' },
       },
-      { url: 'https://cco-streamer2.cdn.3bbtv.com:8443/3bb/live/35/35.mpd', suffix: 'FHD' },
+      // { url: 'https://cco-streamer3.cdn.3bbtv.com:8443/3bb/live/35/35.mpd', suffix: 'FHD' },
       // {
       //   url: 'https://cdn1.googlecdn.live/4k/ch7hd/playlist.m3u8',
       //   suffix: 'SoccerTV FHD',
