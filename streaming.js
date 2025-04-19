@@ -13,7 +13,7 @@ const streamingInfo = {
     sources: [
       {
         url: 'https://cdn-edge-ott.prd.go.th/live_vlc/smil:c30f-97f7-c767-ca64-98aa.smil/playlist.m3u8',
-        suffix: 'FHD',
+        suffix: 'HD',
         priority: 19,
       },
       { url: 'https://lb1-live-mv.v2h-cdn.com/hls/fffe/nbt/nbt.m3u8', suffix: 'HD' },
@@ -160,16 +160,12 @@ const streamingInfo = {
     // tvgId: 'Mono29.th',
     sources: [
       {
-        url: 'https://streaming.monomax.me/Mono29LiveStream/ngrp:myStream_all/chunklist_b6628000.m3u8',
+        url: 'https://live-mono29.monomax.me/out/v1/a0775b0326524af8a7497a555c0b843f/mono29_25.m3u8',
         suffix: 'FHD',
         priority: 35,
       },
-      // {
-      //   url: 'https://edge2-bkk.3bb.co.th:9443/Mono29LivexDRM/mono29DRM_1080TH.stream/manifest_w960951905.mpd',
-      //   suffix: 'FHD',
-      // },
       {
-        url: 'https://edge4-bkk.3bb.co.th:9443/Stream_HLSMONO29_1080P/mono29hls_1080TH.stream/playlist.m3u8',
+        url: 'https://edge2-bkk.3bb.co.th:9443/Mono29LivexDRM/mono29DRM_1080TH.stream/manifest.mpd',
         suffix: 'FHD',
       },
       { url: 'https://lb1-live-mv.v2h-cdn.com/hls/ffbc/mono29/mono29.m3u8' },
@@ -225,7 +221,7 @@ const streamingInfo = {
     logo: 'https://iptv36.vercel.app/logo/thairath.png',
     // tvgId: 'ThairathTV32.th',
     sources: [
-      { url: 'https://cco-streamer3.cdn.3bbtv.com:8443/3bb/live/32/32.mpd', suffix: 'FHD' },
+      // { url: 'https://cco-streamer3.cdn.3bbtv.com:8443/3bb/live/32/32.mpd', suffix: 'FHD' },
       { url: 'https://lb1-live-mv.v2h-cdn.com/hls/ffaf/thairath/thairath.m3u8', suffix: 'HD' },
       {
         url: 'https://ssai-streaming.thairath.co.th/bamm-csai/720p/index.m3u8',
@@ -240,12 +236,7 @@ const streamingInfo = {
     logo: 'https://iptv36.vercel.app/logo/ch3.png',
     // tvgId: 'Channel3.th',
     sources: [
-      { url: 'https://cco-streamer2.cdn.3bbtv.com:8443/3bb/live/33/33.mpd', suffix: 'FHD' },
-      // {
-      //   url: 'https://cdn1.googlecdn.live/4k/ch3hd/playlist.m3u8',
-      //   suffix: 'FHD',
-      //   options: { referer: 'https://soccertv4k.com/' },
-      // },
+      // { url: 'https://cco-streamer2.cdn.3bbtv.com:8443/3bb/live/33/33.mpd', suffix: 'FHD' },
       { url: 'https://lb1-live-mv.v2h-cdn.com/hls/ffae/3hd/3hd.m3u8', suffix: 'HD' },
     ],
   },
@@ -255,7 +246,7 @@ const streamingInfo = {
     logo: 'https://iptv36.vercel.app/logo/amarin.png',
     // tvgId: 'Amarin34HD.th',
     sources: [
-      { url: 'https://cco-streamer2.cdn.3bbtv.com:8443/3bb/live/34/34.mpd', suffix: 'FHD' },
+      { url: 'https://cco-streamer2.cdn.3bbtv.com:8443/3bb/live/34/34.mpd', suffix: 'FHD', priority: 31 },
       { url: 'https://lb1-live-mv.v2h-cdn.com/hls/ffad/amarin/amarin.m3u8', suffix: 'HD' },
       // {
       //   url: 'https://cdn1.googlecdn.live/4k/amarintv/playlist.m3u8',
@@ -274,12 +265,7 @@ const streamingInfo = {
         suffix: 'FHD',
         options: { referer: 'https://www.ch7.com/' },
       },
-      { url: 'https://cco-streamer3.cdn.3bbtv.com:8443/3bb/live/35/35.mpd', suffix: 'FHD' },
-      // {
-      //   url: 'https://cdn1.googlecdn.live/4k/ch7hd/playlist.m3u8',
-      //   suffix: 'SoccerTV FHD',
-      //   options: { referer: 'https://soccertv4k.com/' },
-      // },
+      // { url: 'https://cco-streamer3.cdn.3bbtv.com:8443/3bb/live/35/35.mpd', suffix: 'FHD' },
       { url: 'https://lb1-live-mv.v2h-cdn.com/hls/ffac/7hd/7hd.m3u8', suffix: 'HD' },
     ],
   },
@@ -365,18 +351,23 @@ const streamingInfo = {
         options: { referer: 'https://live-demo.iamtheme.com/' },
         priority: 11,
       },
+      {
+        url: 'https://fw4free.inwstream.com/fw4free/bein1.stream/playlist.m3u8',
+        suffix: 'inw HD',
+        options: { referer: 'https://fw4free.com/' },
+      },
       // {
       //   url: 'https://cdnsv1.bunnycdncloud.com/andaman888th/bein1/playlist.m3u8',
       //   suffix: 'Bunny',
       //   options: { referer: 'https://www.andaman888th.com/' },
       //   priority: 10,
       // },
-      {
-        url: 'https://cdn1.googlecdn.live/4k/bein1/playlist.m3u8',
-        suffix: 'SoccerTV Delay',
-        options: { referer: 'https://soccertv4k.com/' },
-        priority: 9,
-      },
+      // {
+      //   url: 'https://cdn1.googlecdn.live/4k/bein1/playlist.m3u8',
+      //   suffix: 'SoccerTV Delay',
+      //   options: { referer: 'https://soccertv4k.com/' },
+      //   priority: 9,
+      // },
     ],
   },
 
@@ -438,14 +429,13 @@ const streamingInfo = {
     groupName: 'Sport',
     sources: [
       {
-        url: 'http://thangap.ddns.net:8080/proxy/fwsport/ch1.stream/chunklist_w2036967355.m3u8',
-        suffix: 'ThanGap FHD',
-        priority: 31,
-      },
-      {
         url: 'https://r3-sn-5fo-c37ed248.googleuservideo.com:8443/Premier1_720/tracks-v1a1/mono.m3u8?token=c2VydmVyX3RpbWU9MTAvMTYvMjAyNCAwMTozODo0OCBBTSZoYXNoX3ZhbHVlPXNNOURSekVJZDhSSTFJTzdYRVd2bVE9PSZ2YWxpZG1pbnV0ZXM9NSZzdHJtX2xlbj0wJmlkPXdlYi0xMzg1NzU=',
         suffix: 'DooFlix FHD',
-        priority: 31,
+      },
+      {
+        url: 'http://thangap.ddns.net:8080/proxy/fwsport/ch1.stream/chunklist_w2036967355.m3u8',
+        suffix: 'ThanGap HD',
+        priority: 21,
       },
       // {
       //   url: 'https://cdn1.googlecdn.live/4k/epl1_sd/playlist.m3u8',
@@ -726,9 +716,17 @@ const dynamicallyAddStreamingUrlFromByteArkNextData = async () => {
       'FHD',
       'https://www.amarintv.com/live',
       'regexp',
-      // /https:\/\/amarin-ks7jcc\.cdn\.byteark\.com\/live\/playlist.m3u8[^"]+/,
-      /https:\/\/amarin-ks7jcc\.cdn\.byteark\.com\/fleetstream\/amarin-live\/index.m3u8[^"]+/,
+      /https:\/\/amarin-ks7jcc\.cdn\.byteark\.com\/live\/playlist.m3u8[^"]+/,
+      // /https:\/\/amarin-ks7jcc\.cdn\.byteark\.com\/fleetstream\/amarin-live\/index.m3u8[^"]+/,
     ],
+    // [
+    //   'ch3',
+    //   'FHD',
+    //   'https://ch3plus.com/live',
+    //   'cheerio',
+    //   /https:\/\/bec-streaming-jb5qph\.cdn\.byteark\.com\/live\/playlist.m3u8[^"]+/,
+    //   // /https:\/\/amarin-ks7jcc\.cdn\.byteark\.com\/fleetstream\/amarin-live\/index.m3u8[^"]+/,
+    // ],
   ];
 
   await Promise.all(
@@ -755,6 +753,7 @@ const dynamicallyAddStreamingUrlFromByteArkNextData = async () => {
         const $ = cheerio.load(pageHtml);
         const nextData = $('#__NEXT_DATA__').html();
         const data = JSON.parse(nextData);
+        console.log(JSON.stringify(data, null, 2));
         const streamUrl = get(data, 'data.props.initialState.liveReducer.live.streamUrl');
         console.log(data.props.initialState.liveReducer);
         if (streamUrl) {
@@ -798,6 +797,8 @@ const testUrl = async (url, options = {}) => {
     url.includes('googlecdn.live') ||
     url.includes('lnwza007.com') ||
     url.includes('inwstream.com') ||
+    url.includes('cdn.mcot.net') ||
+    url.includes('byteark.com') ||
     url.includes('bunnycdncloud.com')
   ) {
     return true;
@@ -807,7 +808,6 @@ const testUrl = async (url, options = {}) => {
   if (
     process.env.VERCEL &&
     (url.includes('ch7.com') || // Geo Restrict
-      url.includes('cdn.mcot.net') || // Geo Restrict
       url.includes('pptv36-1tsjfj.cdn.byteark.com') || // Geo Restrictt
       url.includes('thaim3u.com') ||
       url.includes('3bb.co.th') ||

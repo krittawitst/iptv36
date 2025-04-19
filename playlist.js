@@ -83,15 +83,14 @@ const channelListWithBackupChannel = [
   ['mono29', 1],
   ['mono29soundtrack'],
   ['mcot'],
-  ['mcot', 1],
 
   // 31-40
+  ['mcot', 1],
   ['one'],
   ['one', 1],
   ['thairath'],
   ['thairath', 1],
   ['ch3'],
-  ['ch3', 1],
   ['amarin'],
   ['amarin', 1],
   ['ch7'],

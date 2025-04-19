@@ -17,6 +17,7 @@ const main = async () => {
 
   // dynamically add streaming url
   await streaming.dynamicallyAddStreamingUrlFromPPTV();
+  await streaming.dynamicallyAddStreamingUrlFromByteArkNextData();
 
   // remember all active channel key to build epg
   let allActiveChannelKey = [];
