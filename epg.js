@@ -243,7 +243,7 @@ const getEpgDataFromTrueId = async () => {
   const epgData = [];
 
   for (const pageProps of allPageProps) {
-    if (pageProps === null) continue;
+    if (pageProps === null || pageProps.channelSlug === undefined) continue;
 
     const channelKey = channelSlugToChannelKey[pageProps.channelSlug];
     for (const program of pageProps.epgList) {
