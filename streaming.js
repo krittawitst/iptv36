@@ -8,7 +8,7 @@ const defaultUserAgent =
 const streamingInfo = {
   nbt: {
     channelName: 'NBT',
-    logo: 'https://iptv36.vercel.app/logo/nbt.png',
+    logo: 'https://iptv36.vercel.app/logo/nbt.png?v=2',
     // tvgId: 'NBT2.th',
     sources: [
       { url: 'https://lb1-live-mv.v2h-cdn.com/hls/fffe/nbt/nbt.m3u8', suffix: 'HD' },
@@ -158,7 +158,7 @@ const streamingInfo = {
 
   mono29: {
     channelName: 'MONO29',
-    logo: 'https://iptv36.vercel.app/logo/mono29.png',
+    logo: 'https://iptv36.vercel.app/logo/mono29.png?v=2',
     // tvgId: 'Mono29.th',
     sources: [
       {
