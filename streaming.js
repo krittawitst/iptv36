@@ -11,12 +11,12 @@ const streamingInfo = {
     logo: 'https://iptv36.vercel.app/logo/nbt.png',
     // tvgId: 'NBT2.th',
     sources: [
+      { url: 'https://lb1-live-mv.v2h-cdn.com/hls/fffe/nbt/nbt.m3u8', suffix: 'HD' },
       {
-        url: 'https://cdn-edge-ott.prd.go.th/live_vlc/smil:c30f-97f7-c767-ca64-98aa.smil/playlist.m3u8',
+        url: 'https://cdn-edge-ott.prd.go.th/live_vlc/smil:c30f-97f7-c767-ca64-98aa/chunklist.m3u8',
         suffix: 'HD',
         priority: 19,
       },
-      { url: 'https://lb1-live-mv.v2h-cdn.com/hls/fffe/nbt/nbt.m3u8', suffix: 'HD' },
     ],
   },
 
@@ -57,6 +57,7 @@ const streamingInfo = {
       {
         url: 'https://oral.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/t-sport-7/playlist.m3u8',
         options: { referer: 'https://live-demo.iamtheme.com/' },
+        priority: 9,
       },
     ],
   },
@@ -76,11 +77,12 @@ const streamingInfo = {
     // tvgId: 'TNN16.th',
     sources: [
       // { url: 'https://iptv36.vercel.app/api/true.m3u8?channel=tnn16', suffix: 'HD' },
+      { url: 'https://lb1-live-mv.v2h-cdn.com/hls/ffdc/tnn/tnn.m3u8' },
       {
         url: 'https://oral.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/tnn24_1080p/playlist.m3u8',
         options: { referer: 'https://live-demo.iamtheme.com/' },
+        priority: 9,
       },
-      { url: 'https://lb1-live-mv.v2h-cdn.com/hls/ffdc/tnn/tnn.m3u8' },
     ],
   },
 
@@ -160,7 +162,7 @@ const streamingInfo = {
     // tvgId: 'Mono29.th',
     sources: [
       {
-        url: 'https://live-mono29.monomax.me/out/v1/a0775b0326524af8a7497a555c0b843f/mono29.m3u8',
+        url: 'https://monomax-uiripn.cdn.byteark.com/plain/th/1080p/index.m3u8',
         suffix: 'FHD',
         priority: 35,
       },
@@ -168,21 +170,17 @@ const streamingInfo = {
     ],
   },
 
-  mono29soundtrack: {
-    channelName: 'MONO29 Soundtrack',
-    logo: 'https://iptv36.vercel.app/logo/mono29.png',
-    tvgId: 'iptv36.mono29',
-    sources: [
-      {
-        url: 'https://edge4-bkk.3bb.co.th:9443/Stream_HLSMONO29_1080P/mono29hls_1080EN.stream/playlist.m3u8',
-        suffix: 'FHD',
-      },
-      // {
-      //   url: 'https://edge2-bkk.3bb.co.th:9443/Mono29LivexDRM/mono29DRM_1080EN.stream/manifest_w1196648753.mpd',
-      //   suffix: 'FHD',
-      // },
-    ],
-  },
+  // mono29soundtrack: {
+  //   channelName: 'MONO29 Soundtrack',
+  //   logo: 'https://iptv36.vercel.app/logo/mono29.png',
+  //   tvgId: 'iptv36.mono29',
+  //   sources: [
+  //     {
+  //       url: 'https://edge4-bkk.3bb.co.th:9443/Stream_HLSMONO29_1080P/mono29hls_1080EN.stream/playlist.m3u8',
+  //       suffix: 'FHD',
+  //     },
+  //   ],
+  // },
 
   mcot: {
     channelName: 'MCOT',
@@ -241,14 +239,7 @@ const streamingInfo = {
     channelName: 'Amarin TV',
     logo: 'https://iptv36.vercel.app/logo/amarin.png',
     // tvgId: 'Amarin34HD.th',
-    sources: [
-      // { url: 'https://cco-streamer2.cdn.3bbtv.com:8443/3bb/live/34/34.mpd', suffix: 'FHD', priority: 31 },
-      { url: 'https://lb1-live-mv.v2h-cdn.com/hls/ffad/amarin/amarin.m3u8', suffix: 'HD' },
-      // {
-      //   url: 'https://cdn1.googlecdn.live/4k/amarintv/playlist.m3u8',
-      //   options: { referer: 'https://soccertv4k.com/' },
-      // },
-    ],
+    sources: [{ url: 'https://lb1-live-mv.v2h-cdn.com/hls/ffad/amarin/amarin.m3u8', suffix: 'HD' }],
   },
 
   ch7: {
@@ -341,8 +332,8 @@ const streamingInfo = {
     groupName: 'Sport',
     sources: [
       {
-        url: 'https://oral.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-6/playlist.m3u8',
-        // url: 'https://switch.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-6/playlist.m3u8',
+        // url: 'https://oral.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-6/playlist.m3u8',
+        url: 'https://dolive.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-6/playlist.m3u8',
         suffix: 'ThaiM3U',
         options: { referer: 'https://live-demo.iamtheme.com/' },
         priority: 11,

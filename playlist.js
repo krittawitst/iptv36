@@ -33,7 +33,7 @@ const playlistV1 = {
     ['gmm25'],
     ['gmm25', 1],
     ['ch8'],
-    ['mono29soundtrack'],
+    ['mono29', 1],
     ['mono29'],
     ['mcot'],
 
@@ -81,24 +81,22 @@ const channelListWithBackupChannel = [
   ['ch8', 1],
   ['mono29'],
   ['mono29', 1],
-  ['mono29soundtrack'],
   ['mcot'],
+  ['mcot', 1],
 
   // 31-40
-  ['mcot', 1],
   ['one'],
   ['one', 1],
   ['thairath'],
   ['thairath', 1],
   ['ch3'],
   ['amarin'],
-  ['amarin', 1],
   ['ch7'],
   ['ch7', 1],
-
-  // 41-42
   ['pptv'],
   ['pptv', 1],
+
+  // 41-42
 ];
 
 const playlistV2 = {
@@ -111,18 +109,18 @@ const playlistV3 = {
   channelList: [
     ...channelListWithBackupChannel,
 
-    ['bein1'],
+    // ['bein1'],
     ['bein3'],
-    ['premier1'],
-    ['premier1', 1],
-    ['premier1', 2],
-    ['premier2'],
-    ['premier3'],
-    ['premier4'],
-    ['premier5'],
+    // ['premier1'],
+    // ['premier1', 1],
+    // ['premier1', 2],
+    // ['premier2'],
+    // ['premier3'],
+    // ['premier4'],
+    // ['premier5'],
     ['truesportshd1'],
     ['truesportshd2'],
-    ['lovenature'],
+    // ['lovenature'],
   ],
 };
 
