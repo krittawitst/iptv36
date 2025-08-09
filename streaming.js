@@ -8,7 +8,7 @@ const defaultUserAgent =
 const streamingInfo = {
   nbt: {
     channelName: 'NBT',
-    logo: 'https://iptv36.vercel.app/logo/nbt.png?v=2',
+    logo: 'https://iptv36.vercel.app/logo/nbt.png?v=4',
     // tvgId: 'NBT2.th',
     sources: [
       { url: 'https://lb1-live-mv.v2h-cdn.com/hls/fffe/nbt/nbt.m3u8', suffix: 'HD' },
@@ -52,14 +52,7 @@ const streamingInfo = {
   tsports: {
     channelName: 'T-Sports',
     logo: 'https://iptv36.vercel.app/logo/tsports.png',
-    sources: [
-      { url: 'https://lb1-live-mv.v2h-cdn.com/hls/ffef/tsport/tsport.m3u8' },
-      {
-        url: 'https://oral.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/t-sport-7/playlist.m3u8',
-        options: { referer: 'https://live-demo.iamtheme.com/' },
-        priority: 9,
-      },
-    ],
+    sources: [{ url: 'https://lb1-live-mv.v2h-cdn.com/hls/ffef/tsport/tsport.m3u8' }],
   },
 
   tptv: {
@@ -78,11 +71,6 @@ const streamingInfo = {
     sources: [
       // { url: 'https://iptv36.vercel.app/api/true.m3u8?channel=tnn16', suffix: 'HD' },
       { url: 'https://lb1-live-mv.v2h-cdn.com/hls/ffdc/tnn/tnn.m3u8' },
-      {
-        url: 'https://oral.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/tnn24_1080p/playlist.m3u8',
-        options: { referer: 'https://live-demo.iamtheme.com/' },
-        priority: 9,
-      },
     ],
   },
 
@@ -158,7 +146,7 @@ const streamingInfo = {
 
   mono29: {
     channelName: 'MONO29',
-    logo: 'https://iptv36.vercel.app/logo/mono29.png?v=2',
+    logo: 'https://iptv36.vercel.app/logo/mono29.png?v=3',
     // tvgId: 'Mono29.th',
     sources: [
       {
@@ -201,7 +189,6 @@ const streamingInfo = {
     logo: 'https://iptv36.vercel.app/logo/one.png',
     // tvgId: 'One31.th',
     sources: [
-      { url: 'https://cco-streamer2.cdn.3bbtv.com:8443/3bb/live/31/31.mpd', suffix: 'FHD' },
       {
         url: 'https://bcovlive-a.akamaihd.net/b6603a14ea59440a95e9235e14bc9332/ap-southeast-1/6415628290001/9c3d7fc7d10840a69e48b5939ae886e0/playlist_ssaiM.m3u8',
         suffix: 'FHD',
@@ -229,10 +216,7 @@ const streamingInfo = {
     channelName: 'CH3',
     logo: 'https://iptv36.vercel.app/logo/ch3.png',
     // tvgId: 'Channel3.th',
-    sources: [
-      // { url: 'https://cco-streamer2.cdn.3bbtv.com:8443/3bb/live/33/33.mpd', suffix: 'FHD' },
-      { url: 'https://lb1-live-mv.v2h-cdn.com/hls/ffae/3hd/3hd.m3u8', suffix: 'HD' },
-    ],
+    sources: [{ url: 'https://lb1-live-mv.v2h-cdn.com/hls/ffae/3hd/3hd.m3u8', suffix: 'HD' }],
   },
 
   amarin: {
@@ -248,11 +232,10 @@ const streamingInfo = {
     // tvgId: 'BBTVChannel7.th',
     sources: [
       {
-        url: 'https://live-cdn-hwc.ch7.com/livech7hd/HD_1080p.m3u8?vhost=streaming-hwc.ch7.com',
+        url: 'https://live-cdn.ch7.com/out/v1/eafeb02c55b64a15b278b1e66c7fc776/playlist_9.m3u8',
         suffix: 'FHD',
         options: { referer: 'https://www.ch7.com/' },
       },
-      // { url: 'https://cco-streamer3.cdn.3bbtv.com:8443/3bb/live/35/35.mpd', suffix: 'FHD' },
       { url: 'https://lb1-live-mv.v2h-cdn.com/hls/ffac/7hd/7hd.m3u8', suffix: 'HD' },
     ],
   },
@@ -330,15 +313,7 @@ const streamingInfo = {
     logo: 'https://i.imgur.com/Vtk2cGI.png',
     // tvgId: 'beINSports1Thailand.th',
     groupName: 'Sport',
-    sources: [
-      {
-        // url: 'https://oral.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-6/playlist.m3u8',
-        url: 'https://dolive.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-6/playlist.m3u8',
-        suffix: 'ThaiM3U',
-        options: { referer: 'https://live-demo.iamtheme.com/' },
-        priority: 11,
-      },
-    ],
+    sources: [],
   },
 
   bein2: {
@@ -354,15 +329,7 @@ const streamingInfo = {
     logo: 'https://i.imgur.com/UYSMao3.png',
     // tvgId: 'beINSports3Thailand.th',
     groupName: 'Sport',
-    sources: [
-      {
-        // url: 'https://switch.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-7/playlist.m3u8',
-        url: 'https://oral.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-7/playlist.m3u8',
-        suffix: 'ThaiM3U HD',
-        options: { referer: 'https://live-demo.iamtheme.com/' },
-        priority: 21,
-      },
-    ],
+    sources: [],
   },
 
   premier1: {
@@ -372,20 +339,9 @@ const streamingInfo = {
     groupName: 'Sport',
     sources: [
       {
-        url: 'https://r3-sn-5fo-c37ed248.googleuservideo.com:8443/Premier1_720/tracks-v1a1/mono.m3u8?token=c2VydmVyX3RpbWU9MTAvMTYvMjAyNCAwMTozODo0OCBBTSZoYXNoX3ZhbHVlPXNNOURSekVJZDhSSTFJTzdYRVd2bVE9PSZ2YWxpZG1pbnV0ZXM9NSZzdHJtX2xlbj0wJmlkPXdlYi0xMzg1NzU=',
-        suffix: 'DooFlix FHD',
-      },
-      {
         url: 'http://thangap.ddns.net:8080/proxy/fwsport/ch1.stream/chunklist_w2036967355.m3u8',
         suffix: 'ThanGap HD',
         priority: 21,
-      },
-      {
-        url: 'https://oral.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-1/playlist.m3u8',
-        // url: 'https://switch.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-1/playlist.m3u8',
-        // url: 'https://dolive.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-1/playlist.m3u8',
-        suffix: 'ThaiM3U',
-        options: { referer: 'https://live-demo.iamtheme.com/' },
       },
     ],
   },
@@ -395,14 +351,7 @@ const streamingInfo = {
     logo: 'https://iptv36.vercel.app/logo/premier_hd2.png',
     // tvgId: 'TruePremierFootball2.th',
     groupName: 'Sport',
-    sources: [
-      {
-        url: 'https://oral.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-2/playlist.m3u8',
-        // url: 'https://switch.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-2/playlist.m3u8',
-        suffix: 'ThaiM3U',
-        options: { referer: 'https://live-demo.iamtheme.com/' },
-      },
-    ],
+    sources: [],
   },
 
   premier3: {
@@ -410,14 +359,7 @@ const streamingInfo = {
     logo: 'https://iptv36.vercel.app/logo/premier_hd3.png',
     // tvgId: 'TruePremierFootball3.th',
     groupName: 'Sport',
-    sources: [
-      {
-        url: 'https://oral.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-3/playlist.m3u8',
-        // url: 'https://switch.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-3/playlist.m3u8',
-        suffix: 'ThaiM3U',
-        options: { referer: 'https://live-demo.iamtheme.com/' },
-      },
-    ],
+    sources: [],
   },
 
   premier4: {
@@ -425,14 +367,7 @@ const streamingInfo = {
     logo: 'https://iptv36.vercel.app/logo/premier_hd4.png',
     // tvgId: 'TruePremierFootball4.th',
     groupName: 'Sport',
-    sources: [
-      {
-        url: 'https://oral.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-4/playlist.m3u8',
-        // url: 'https://switch.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-4/playlist.m3u8',
-        suffix: 'ThaiM3U',
-        options: { referer: 'https://live-demo.iamtheme.com/' },
-      },
-    ],
+    sources: [],
   },
 
   premier5: {
@@ -440,40 +375,21 @@ const streamingInfo = {
     logo: 'https://iptv36.vercel.app/logo/premier_hd5.png',
     // tvgId: 'TruePremierFootball5.th',
     groupName: 'Sport',
-    sources: [
-      {
-        url: 'https://oral.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-5/playlist.m3u8',
-        // url: 'https://switch.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-5/playlist.m3u8',
-        suffix: 'ThaiM3U',
-        options: { referer: 'https://live-demo.iamtheme.com/' },
-      },
-    ],
+    sources: [],
   },
 
   truesportshd1: {
     channelName: 'True Sports 1',
     logo: 'https://iptv36.vercel.app/logo/true_sports_hd.png',
     groupName: 'Sport',
-    sources: [
-      {
-        url: 'https://dolive.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-8/playlist.m3u8',
-        options: { referer: 'https://live-demo.iamtheme.com/' },
-        suffix: 'ThaiM3U',
-      },
-    ],
+    sources: [],
   },
 
   truesportshd2: {
     channelName: 'True Sports 2',
     logo: 'https://iptv36.vercel.app/logo/true_sports_hd2.png',
     groupName: 'Sport',
-    sources: [
-      {
-        url: 'https://dolive.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-9/playlist.m3u8',
-        options: { referer: 'https://live-demo.iamtheme.com/' },
-        suffix: 'ThaiM3U',
-      },
-    ],
+    sources: [],
   },
 
   ipcam: {
@@ -674,7 +590,6 @@ const testUrl = async (url, options = {}) => {
     process.env.VERCEL &&
     (url.includes('ch7.com') || // Geo Restrict
       url.includes('pptv36-9h0yba.cdn.byteark.com') || // Geo Restrictt
-      url.includes('thaim3u.com') ||
       url.includes('3bb.co.th') ||
       url.includes('3bbtv.com') ||
       url.includes('prsmedia') ||

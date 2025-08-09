@@ -253,7 +253,7 @@ const getEpgDataFromTrueId = async () => {
       const programStartStr = `${program.start_date.slice(0, 19).replace(/-|:|T/g, '')} +0000`;
       const programEndStr = `${program.end_date.slice(0, 19).replace(/-|:|T/g, '')} +0000`;
       const programTitle = program.title ? program.title.trim() : 'No Program Name';
-      const programDescription = program.ep_name || program.info.synopsis_th;
+      const programDescription = program.ep_name || (program.info && program.info.synopsis_th) || '';
       epgData.push({
         programStartStr,
         programEndStr,
