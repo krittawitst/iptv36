@@ -332,29 +332,15 @@ const streamingInfo = {
     sources: [],
   },
 
-  // premier1: {
-  //   channelName: 'Premier 1',
-  //   logo: 'https://iptv36.vercel.app/logo/premier_hd1.png',
-  //   // tvgId: 'TruePremierFootball1.th',
-  //   groupName: 'Sport',
-  //   sources: [
-  //     {
-  //       url: 'http://thangap.ddns.net:8080/proxy/fwsport/ch1.stream/chunklist_w2036967355.m3u8',
-  //       suffix: 'ThanGap HD',
-  //       priority: 21,
-  //     },
-  //   ],
-  // },
-
-  premier1: {
-    channelName: 'Premier 1',
-    logo: 'https://iptv36.vercel.app/logo/premier_hd1.png',
+  monomax1: {
+    channelName: 'Mono Max 1',
+    logo: 'https://iptv36.vercel.app/logo/monomax1.png',
     // tvgId: 'TruePremierFootball1.th',
     groupName: 'Sport',
     sources: [
       {
         url: 'http://thangap.ddns.net:3000/premier.m3u8?ch=monomax1',
-        suffix: 'ThanGap HD',
+        suffix: 'HD',
         priority: 21,
       },
     ],

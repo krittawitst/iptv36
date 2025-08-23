@@ -107,7 +107,7 @@ const playlistV3 = {
 
     // ['bein1'],
     // ['bein3'],
-    ['premier1'],
+    ['monomax1'],
     // ['premier1', 1],
     // ['premier1', 2],
     // ['premier2'],
