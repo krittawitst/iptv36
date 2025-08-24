@@ -108,15 +108,7 @@ const playlistV3 = {
     // ['bein1'],
     // ['bein3'],
     ['monomax1'],
-    // ['premier1', 1],
-    // ['premier1', 2],
-    // ['premier2'],
-    // ['premier3'],
-    // ['premier4'],
-    // ['premier5'],
-    // ['truesportshd1'],
-    // ['truesportshd2'],
-    // ['lovenature'],
+    ['monomax2'],
   ],
 };
 

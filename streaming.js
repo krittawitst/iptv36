@@ -333,49 +333,29 @@ const streamingInfo = {
   },
 
   monomax1: {
-    channelName: 'Mono Max 1',
+    channelName: 'MonoMax 1',
     logo: 'https://iptv36.vercel.app/logo/monomax1.png',
     // tvgId: 'TruePremierFootball1.th',
     groupName: 'Sport',
     sources: [
       {
         url: 'http://thangap.ddns.net:3000/premier.m3u8?ch=monomax1',
-        suffix: 'HD',
         priority: 21,
       },
     ],
   },
 
-  premier2: {
-    channelName: 'Premier 2',
-    logo: 'https://iptv36.vercel.app/logo/premier_hd2.png',
-    // tvgId: 'TruePremierFootball2.th',
+  monomax2: {
+    channelName: 'MonoMax 2',
+    logo: 'https://iptv36.vercel.app/logo/monomax2.png',
+    // tvgId: 'TruePremierFootball1.th',
     groupName: 'Sport',
-    sources: [],
-  },
-
-  premier3: {
-    channelName: 'Premier 3',
-    logo: 'https://iptv36.vercel.app/logo/premier_hd3.png',
-    // tvgId: 'TruePremierFootball3.th',
-    groupName: 'Sport',
-    sources: [],
-  },
-
-  premier4: {
-    channelName: 'Premier 4',
-    logo: 'https://iptv36.vercel.app/logo/premier_hd4.png',
-    // tvgId: 'TruePremierFootball4.th',
-    groupName: 'Sport',
-    sources: [],
-  },
-
-  premier5: {
-    channelName: 'Premier 5',
-    logo: 'https://iptv36.vercel.app/logo/premier_hd5.png',
-    // tvgId: 'TruePremierFootball5.th',
-    groupName: 'Sport',
-    sources: [],
+    sources: [
+      {
+        url: 'http://thangap.ddns.net:3000/premier.m3u8?ch=monomax2',
+        priority: 21,
+      },
+    ],
   },
 
   truesportshd1: {
