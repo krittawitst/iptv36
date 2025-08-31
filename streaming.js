@@ -11,9 +11,9 @@ const streamingInfo = {
     logo: 'https://iptv36.vercel.app/logo/nbt.png?v=4',
     // tvgId: 'NBT2.th',
     sources: [
-      { url: 'https://lb1-live-mv.v2h-cdn.com/hls/fffe/jvlbgvhf/jvlbgvhf.m3u8', suffix: 'HD' },
+      { url: 'https://lb1-live-mv.v2h-cdn.com/hls/fffe/jvlbgvhf/jvlbgvhf.m3u8', suffix: 'FHD' },
       {
-        url: 'https://cdn-edge-ott.prd.go.th/live_vlc/smil:c30f-97f7-c767-ca64-98aa.smil/playlist.m3u8?DVR',
+        url: 'https://cdn-edge.iiptvcdn.com/live_event/smil:f180-054a-38d7-ce66-f7cf.smil/chunklist_w639252070_b2128000.m3u8',
         suffix: 'HD',
         priority: 19,
       },
@@ -26,7 +26,7 @@ const streamingInfo = {
     // tvgId: 'ThaiPBS3.th',
     sources: [
       { url: 'https://thaipbs-live.cdn.byteark.com/live/playlist.m3u8', suffix: 'FHD' },
-      { url: 'https://lb1-live-mv.v2h-cdn.com/hls/fffd/muruugvl/muruugvl.m3u8', suffix: 'HD' },
+      { url: 'https://lb1-live-mv.v2h-cdn.com/hls/fffd/muruugvl/muruugvl.m3u8', suffix: 'FHD' },
     ],
   },
 
@@ -45,7 +45,7 @@ const streamingInfo = {
     // tvgId: 'ThaiTV5HD1.th',
     sources: [
       { url: 'https://639bc5877c5fe.streamlock.net/tv5hdlive/tv5hdlive/playlist.m3u8', suffix: 'FHD' },
-      { url: 'https://lb1-live-mv.v2h-cdn.com/hls/fffb/muushk/muushk.m3u8', suffix: 'HD' },
+      { url: 'https://lb1-live-mv.v2h-cdn.com/hls/fffb/muushk/muushk.m3u8', suffix: 'FHD' },
     ],
   },
 
@@ -92,6 +92,7 @@ const streamingInfo = {
       {
         url: 'https://nationtv-1jdcjo.cdn.byteark.com/fleetstream/nationtvlive/index.m3u8',
         suffix: 'FHD',
+        options: { referer: 'https://www.nationtv.tv/' },
       },
       { url: 'https://lb1-live-mv.v2h-cdn.com/hls/ffcc/goyjo/goyjo.m3u8' },
     ],
@@ -180,7 +181,7 @@ const streamingInfo = {
       //   url: 'https://mcothd-streaming-edge-cdn.mcot.net/tencentmcot/smil:tencentmcot.smil/chunklist_w1995189563_b3000000.m3u8',
       //   suffix: 'FHD',
       // },
-      { url: 'https://lb1-live-mv.v2h-cdn.com/hls/ffbb/gdhk/gdhk.m3u8', suffix: 'HD' },
+      { url: 'https://lb1-live-mv.v2h-cdn.com/hls/ffbb/gdhk/gdhk.m3u8', suffix: 'FHD' },
     ],
   },
 
@@ -193,7 +194,7 @@ const streamingInfo = {
         url: 'https://bcovlive-a.akamaihd.net/b6603a14ea59440a95e9235e14bc9332/ap-southeast-1/6415628290001/9c3d7fc7d10840a69e48b5939ae886e0/playlist_ssaiM.m3u8',
         suffix: 'FHD',
       },
-      { url: 'https://lb1-live-mv.v2h-cdn.com/hls/ffba/yogvfi/yogvfi.m3u8', suffix: 'HD' },
+      { url: 'https://lb1-live-mv.v2h-cdn.com/hls/ffba/yogvfi/yogvfi.m3u8', suffix: 'FHD' },
     ],
   },
 
@@ -203,7 +204,7 @@ const streamingInfo = {
     // tvgId: 'ThairathTV32.th',
     sources: [
       // { url: 'https://cco-streamer3.cdn.3bbtv.com:8443/3bb/live/32/32.mpd', suffix: 'FHD' },
-      { url: 'https://lb1-live-mv.v2h-cdn.com/hls/ffaf/wmpiy/wmpiy.m3u8', suffix: 'HD' },
+      { url: 'https://lb1-live-mv.v2h-cdn.com/hls/ffaf/wmpiy/wmpiy.m3u8', suffix: 'FHD' },
       {
         url: 'https://ssai-streaming.thairath.co.th/bamm-csai/720p/index.m3u8',
         options: { referer: 'https://www.thairath.co.th/' },
@@ -216,14 +217,14 @@ const streamingInfo = {
     channelName: 'CH3',
     logo: 'https://iptv36.vercel.app/logo/ch3.png',
     // tvgId: 'Channel3.th',
-    sources: [{ url: 'https://lb1-live-mv.v2h-cdn.com/hls/ffae/muulk/muulk.m3u8', suffix: 'HD' }],
+    sources: [{ url: 'https://lb1-live-mv.v2h-cdn.com/hls/ffae/muulk/muulk.m3u8', suffix: 'FHD' }],
   },
 
   amarin: {
     channelName: 'Amarin TV',
     logo: 'https://iptv36.vercel.app/logo/amarin.png',
     // tvgId: 'Amarin34HD.th',
-    sources: [{ url: 'https://lb1-live-mv.v2h-cdn.com/hls/ffad/vibomi/vibomi.m3u8', suffix: 'HD' }],
+    sources: [{ url: 'https://lb1-live-mv.v2h-cdn.com/hls/ffad/vibomi/vibomi.m3u8', suffix: 'FHD' }],
   },
 
   ch7: {
@@ -236,7 +237,7 @@ const streamingInfo = {
         suffix: 'FHD',
         options: { referer: 'https://www.ch7.com/' },
       },
-      { url: 'https://lb1-live-mv.v2h-cdn.com/hls/ffac/gohg/gohg.m3u8', suffix: 'HD' },
+      { url: 'https://lb1-live-mv.v2h-cdn.com/hls/ffac/gohg/gohg.m3u8', suffix: 'FHD' },
     ],
   },
 
@@ -251,7 +252,7 @@ const streamingInfo = {
       //   suffix: 'FHD',
       //   options: { referer: 'https://soccertv4k.com/' },
       // },
-      { url: 'https://lb1-live-mv.v2h-cdn.com/hls/ffab/rurumuu/rurumuu.m3u8', suffix: 'HD' },
+      { url: 'https://lb1-live-mv.v2h-cdn.com/hls/ffab/rurumuu/rurumuu.m3u8', suffix: 'FHD' },
     ],
   },
 
@@ -339,7 +340,7 @@ const streamingInfo = {
     groupName: 'Sport',
     sources: [
       {
-        url: 'http://thangap.ddns.net:3000/premier.m3u8?ch=monomax1',
+        url: 'http://thangap.ddns.net:3000/ball.m3u8?q=monomax1',
         priority: 21,
       },
     ],
@@ -352,7 +353,7 @@ const streamingInfo = {
     groupName: 'Sport',
     sources: [
       {
-        url: 'http://thangap.ddns.net:3000/premier.m3u8?ch=monomax2',
+        url: 'http://thangap.ddns.net:3000/ball.m3u8?ch=monomax2',
         priority: 21,
       },
     ],
