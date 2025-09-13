@@ -353,7 +353,7 @@ const streamingInfo = {
     groupName: 'Sport',
     sources: [
       {
-        url: 'http://thangap.ddns.net:3000/ball.m3u8?ch=monomax2',
+        url: 'http://thangap.ddns.net:3000/ball.m3u8?q=monomax2',
         priority: 21,
       },
     ],
