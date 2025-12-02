@@ -14,13 +14,13 @@ const playlistV1 = {
     ['tptv'],
 
     // 11-20
-    ['one', 1],
+    ['nbt', 1],
     ['thairath', 1],
     ['thaipbs', 1], // ['ch3', 1],
     ['altv', 1], // ['amarin', 1],
     ['ch7', 1],
     ['tnn16'],
-    ['nbt', 1], // ['tnn16', 1],
+    ['tnn16', 1],
     ['jkn18'],
     ['jkn18', 1],
     ['true4u', 1],
