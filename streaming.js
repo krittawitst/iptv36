@@ -13,7 +13,7 @@ const streamingInfo = {
     sources: [
       {
         url: 'https://cdn-edge.iiptvcdn.com/live_event/smil:f180-054a-38d7-ce66-f7cf.smil/playlist.m3u8',
-        suffix: 'HD',
+        suffix: 'FHD',
       },
       {
         url: 'https://cdn-edge.iiptvcdn.com/live_event/smil:6ee0-5126-0cee-7ba2-18b7.smil/playlist.m3u8',
@@ -61,7 +61,7 @@ const streamingInfo = {
   tsports: {
     channelName: 'T-Sports',
     logo: 'https://iptv36.vercel.app/logo/tsports.png',
-    sources: [{ url: 'https://iptv36.vercel.app/maintenance.m3u8?ch=tsports' }],
+    sources: [{ url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=tsports' }],
   },
 
   tptv: {
@@ -75,7 +75,7 @@ const streamingInfo = {
     logo: 'https://iptv36.vercel.app/logo/tnn16.png',
     // tvgId: 'TNN16.th',
     sources: [
-      { url: 'https://iptv36.vercel.app/maintenance.m3u8?ch=tnn16' },
+      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=tnn16' },
       // { url: 'https://iptv36.vercel.app/api/true.m3u8?channel=tnn16', suffix: 'HD' },
     ],
   },
@@ -84,7 +84,7 @@ const streamingInfo = {
     channelName: 'JKN18',
     logo: 'https://iptv36.vercel.app/logo/jkn18.png',
     // tvgId: 'JKN18.th',
-    sources: [{ url: 'https://iptv36.vercel.app/maintenance.m3u8?ch=jkn18' }],
+    sources: [{ url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=jkn18' }],
   },
 
   nation: {
@@ -162,7 +162,7 @@ const streamingInfo = {
         suffix: 'FHD',
         priority: 35,
       },
-      { url: 'https://monomax-uiripn.cdn.byteark.com/plain/th/playlist.m3u8' },
+      { url: 'https://monomax-uiripn.cdn.byteark.com/plain/th/playlist.m3u8', suffix: 'FHD' },
       { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=mono29', priority: 1 },
     ],
   },
@@ -216,7 +216,7 @@ const streamingInfo = {
         options: { referer: 'https://www.thairath.co.th/' },
         suffix: 'HD',
       },
-      { url: 'https://ww.dooballfree.vip/live/thairathtv/playlist.m3u8', suffix: 'HD Kratook', priority: 9 },
+      { url: 'https://ww.dooballfree.vip/live/thairathtv/playlist.m3u8', suffix: 'Kratook', priority: 9 },
       { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=thairath', priority: 1 },
     ],
   },
@@ -228,7 +228,7 @@ const streamingInfo = {
     sources: [
       {
         url: 'http://stalker.klma2023.net/play/live.php?mac=00:1B:79:F8:59:0E&stream=1776006&extension=m3u8',
-        suffix: 'FHD',
+        suffix: 'HD',
       },
       { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=ch3', priority: 1 },
     ],
@@ -256,7 +256,7 @@ const streamingInfo = {
       },
       {
         url: 'https://ww.dooballfree.vip/live/ch7hd/playlist.m3u8',
-        suffix: 'HD Kratook',
+        suffix: 'FHD Kratook',
       },
       { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=ch7', priority: 1 },
     ],
@@ -267,7 +267,7 @@ const streamingInfo = {
     logo: 'https://iptv36.vercel.app/logo/pptv.png',
     // tvgId: 'PPTVHD36.th',
     sources: [
-      { url: 'https://ww.dooballfree.vip/live/pptv/playlist.m3u8', suffix: 'HD Kratook' },
+      { url: 'https://ww.dooballfree.vip/live/pptv/playlist.m3u8', suffix: 'FHD Kratook' },
       { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=pptv', priority: 1 },
     ],
   },
