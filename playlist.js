@@ -61,12 +61,9 @@ const channelListWithBackupChannel = [
   ['tptv'],
 
   // 11-20
-  ['tptv', 1],
   ['tnn16'],
   ['jkn18'],
-  ['jkn18', 1],
   ['nation'],
-  ['nation', 1],
   ['workpoint'],
   ['workpoint', 1],
   ['true4u'],

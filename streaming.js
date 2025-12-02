@@ -52,7 +52,7 @@ const streamingInfo = {
       { url: 'https://639bc5877c5fe.streamlock.net/tv5hdlive/tv5hdlive/playlist.m3u8', suffix: 'FHD' },
       {
         url: 'http://stalker.klma2023.net:80/play/live.php?mac=00:1B:79:F8:59:0E&stream=1776008&extension=ts&play_token=zId1GtrCPh',
-        suffix: 'HD',
+        suffix: 'FHD',
       },
       { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=tv5' },
     ],
