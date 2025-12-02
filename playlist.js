@@ -54,36 +54,37 @@ const channelListWithBackupChannel = [
   ['thaipbs'],
   ['thaipbs', 1],
   ['altv'],
-  ['altv', 1],
   ['tv5'],
   ['tv5', 1],
   ['tsports'],
   ['tptv'],
+  ['tnn16'],
 
   // 11-20
-  ['tnn16'],
   ['jkn18'],
   ['nation'],
   ['workpoint'],
   ['workpoint', 1],
   ['true4u'],
   ['true4u', 1],
-
-  // 21-30
+  ['gmm25'],
   ['ch8'],
   ['ch8', 1],
   ['mono29'],
+
+  // 21-30
   ['mono29', 1],
   ['mono29soundtrack'],
   ['mcot'],
   ['mcot', 1],
   ['one'],
-
-  // 31-40
+  ['one', 1],
   ['thairath'],
   ['thairath', 1],
   ['ch3'],
   ['amarin'],
+
+  // 31-40
   ['ch7'],
   ['ch7', 1],
   ['pptv'],
