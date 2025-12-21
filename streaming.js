@@ -12,12 +12,12 @@ const streamingInfo = {
     // tvgId: 'NBT2.th',
     sources: [
       {
-        url: 'https://cdn-edge.iiptvcdn.com/live_event/smil:f180-054a-38d7-ce66-f7cf.smil/playlist.m3u8',
+        url: 'https://cdn-edge.iiptvcdn.com/live_event/smil:1180-0c9c-ad1f-4e5d-aa48.smil/playlist.m3u8',
         suffix: 'FHD',
       },
       {
         url: 'https://cdn-edge.iiptvcdn.com/live_event/smil:6ee0-5126-0cee-7ba2-18b7.smil/playlist.m3u8',
-        suffix: 'HD Central',
+        suffix: 'Central FHD',
         priority: 19,
       },
       { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=nbt' },
