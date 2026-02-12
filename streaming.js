@@ -15,12 +15,7 @@ const streamingInfo = {
         url: 'https://cdn-edge.iiptvcdn.com/live_event/smil:1180-0c9c-ad1f-4e5d-aa48.smil/playlist.m3u8',
         suffix: 'FHD',
       },
-      {
-        url: 'https://cdn-edge.iiptvcdn.com/live_event/smil:6ee0-5126-0cee-7ba2-18b7.smil/playlist.m3u8',
-        suffix: 'Central FHD',
-        priority: 19,
-      },
-      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=nbt' },
+      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=nbt', suffix: '[เสีย]' },
     ],
   },
 
@@ -31,16 +26,7 @@ const streamingInfo = {
     sources: [
       { url: 'https://thaipbs-live.cdn.byteark.com/live/playlist.m3u8', suffix: 'FHD' },
       { url: 'https://thaipbs-ophctt.cdn.byteark.com/live/playlist.m3u8', suffix: 'FHD', priority: 29 },
-      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=thaipbs' },
-    ],
-  },
-
-  altv: {
-    channelName: 'ALTV',
-    logo: 'https://iptv36.vercel.app/logo/altv.png',
-    sources: [
-      { url: 'https://thaipbs-ujxrch.cdn.byteark.com/live/playlist.m3u8', suffix: 'FHD' },
-      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=altv' },
+      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=thaipbs', suffix: '[เสีย]' },
     ],
   },
 
@@ -50,18 +36,14 @@ const streamingInfo = {
     // tvgId: 'ThaiTV5HD1.th',
     sources: [
       { url: 'https://639bc5877c5fe.streamlock.net/tv5hdlive/tv5hdlive/playlist.m3u8', suffix: 'FHD' },
-      {
-        url: 'http://stalker.klma2023.net:80/play/live.php?mac=00:1B:79:F8:59:0E&stream=1776008&extension=ts&play_token=zId1GtrCPh',
-        suffix: 'FHD',
-      },
-      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=tv5' },
+      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=tv5', suffix: '[เสีย]' },
     ],
   },
 
   tsports: {
     channelName: 'T-Sports',
     logo: 'https://iptv36.vercel.app/logo/tsports.png',
-    sources: [{ url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=tsports' }],
+    sources: [{ url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=tsports', suffix: '[เสีย]' }],
   },
 
   tptv: {
@@ -70,21 +52,26 @@ const streamingInfo = {
     sources: [{ url: 'https://tv-live.tpchannel.org/live/tv_1080p.m3u8?vhost=tv-live.tpchannel.org', suffix: 'FHD' }],
   },
 
+  nbtcentral: {
+    channelName: 'NBT Central',
+    logo: 'https://iptv36.vercel.app/logo/nbt.png?v=4',
+    sources: [
+      {
+        url: 'https://cdn-edge.iiptvcdn.com/live_event/smil:6ee0-5126-0cee-7ba2-18b7.smil/playlist.m3u8',
+        suffix: 'FHD',
+      },
+      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=nbtcentral', suffix: '[เสีย]' },
+    ],
+  },
+
   tnn16: {
     channelName: 'TNN16',
     logo: 'https://iptv36.vercel.app/logo/tnn16.png',
     // tvgId: 'TNN16.th',
     sources: [
-      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=tnn16' },
+      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=tnn16', suffix: '[เสีย]' },
       // { url: 'https://iptv36.vercel.app/api/true.m3u8?channel=tnn16', suffix: 'HD' },
     ],
-  },
-
-  jkn18: {
-    channelName: 'JKN18',
-    logo: 'https://iptv36.vercel.app/logo/jkn18.png',
-    // tvgId: 'JKN18.th',
-    sources: [{ url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=jkn18' }],
   },
 
   nation: {
@@ -97,7 +84,7 @@ const streamingInfo = {
         suffix: 'FHD',
         options: { referer: 'https://www.nationtv.tv/' },
       },
-      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=nation', priority: 1 },
+      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=nation', priority: 1, suffix: '[เสีย]' },
     ],
   },
 
@@ -106,9 +93,9 @@ const streamingInfo = {
     logo: 'https://iptv36.vercel.app/logo/workpoint.png',
     // tvgId: 'Workpoint23.th',
     sources: [
-      { url: 'https://global-media.sooplive.com/live/workpoint/master.m3u8', suffix: 'FHD' },
+      // { url: 'https://global-media.sooplive.com/live/workpoint/master.m3u8', suffix: 'FHD' },
       { url: 'https://cco-streamer2.cdn.3bbtv.com:8443/3bb/live/23/23.mpd' },
-      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=workpoint', priority: 1 },
+      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=workpoint', priority: 1, suffix: '[เสีย]' },
     ],
   },
 
@@ -119,7 +106,7 @@ const streamingInfo = {
     sources: [
       { url: 'https://iptv36.vercel.app/api/true.m3u8?channel=true4u', suffix: 'HD' },
       { url: 'https://cco-streamer2.cdn.3bbtv.com:8443/3bb/live/24/24.mpd' },
-      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=true4u', priority: 1 },
+      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=true4u', priority: 1, suffix: '[เสีย]' },
     ],
   },
 
@@ -132,7 +119,7 @@ const streamingInfo = {
         url: 'https://bcovlive-a.akamaihd.net/57d4bf695e80436d9335f4f50adbe438/ap-southeast-1/6415628290001/7e85dc4a59904e45b4fdffebd62e1d82/playlist_ssaiM.m3u8',
         suffix: 'FHD',
       },
-      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=gmm25', priority: 1 },
+      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=gmm25', priority: 1, suffix: '[เสีย]' },
     ],
   },
 
@@ -148,7 +135,7 @@ const streamingInfo = {
         suffix: 'Kratook',
         priority: 9,
       },
-      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=ch8', priority: 1 },
+      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=ch8', priority: 1, suffix: '[เสีย]' },
     ],
   },
 
@@ -163,7 +150,7 @@ const streamingInfo = {
         priority: 35,
       },
       { url: 'https://monomax-uiripn.cdn.byteark.com/plain/th/playlist.m3u8', suffix: 'FHD' },
-      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=mono29', priority: 1 },
+      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=mono29', priority: 1, suffix: '[เสีย]' },
     ],
   },
 
@@ -189,7 +176,7 @@ const streamingInfo = {
         url: 'https://mcothd-streaming-edge-cdn.mcot.net/tencentmcot/smil:tencentmcot.smil/playlist.m3u8',
         suffix: 'FHD',
       },
-      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=mcot', priority: 1 },
+      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=mcot', priority: 1, suffix: '[เสีย]' },
     ],
   },
 
@@ -201,8 +188,13 @@ const streamingInfo = {
       {
         url: 'https://bcovlive-a.akamaihd.net/b6603a14ea59440a95e9235e14bc9332/ap-southeast-1/6415628290001/9c3d7fc7d10840a69e48b5939ae886e0/playlist_ssaiM.m3u8',
         suffix: 'FHD',
+        priority: 31,
       },
-      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=one', priority: 1 },
+      {
+        url: 'https://bcovlive-a.akamaihd.net/b6603a14ea59440a95e9235e14bc9332/ap-southeast-1/6415628290001/9c3d7fc7d10840a69e48b5939ae886e0/playlist_ssaiM.m3u8?v=1',
+        suffix: 'FHD Duplicated',
+      },
+      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=one', priority: 1, suffix: '[เสีย]' },
     ],
   },
 
@@ -216,8 +208,8 @@ const streamingInfo = {
         options: { referer: 'https://www.thairath.co.th/' },
         suffix: 'HD',
       },
-      { url: 'https://ww.dooballfree.vip/live/thairathtv/playlist.m3u8', suffix: 'Kratook', priority: 9 },
-      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=thairath', priority: 1 },
+      { url: 'https://ww.dooballfree.vip/live/thairathtv/playlist.m3u8', suffix: 'FHD Kratook', priority: 9 },
+      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=thairath', priority: 1, suffix: '[เสีย]' },
     ],
   },
 
@@ -226,11 +218,8 @@ const streamingInfo = {
     logo: 'https://iptv36.vercel.app/logo/ch3.png',
     // tvgId: 'Channel3.th',
     sources: [
-      {
-        url: 'http://stalker.klma2023.net/play/live.php?mac=00:1B:79:F8:59:0E&stream=1776006&extension=m3u8',
-        suffix: 'HD',
-      },
-      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=ch3', priority: 1 },
+      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=ch3', priority: 1, suffix: '[เสีย]' },
+      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=ch3v2', priority: 0, suffix: 'Duplicated [เสีย]' },
     ],
   },
 
@@ -239,8 +228,9 @@ const streamingInfo = {
     logo: 'https://iptv36.vercel.app/logo/amarin.png',
     // tvgId: 'Amarin34HD.th',
     sources: [
-      { url: 'https://ww.dooballfree.vip/live/amarintv/playlist.m3u8', suffix: 'HD Kratook' },
-      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=amarin', priority: 1 },
+      { url: 'https://ww.dooballfree.vip/live/amarintv/playlist.m3u8', priority: 31, suffix: 'HD Kratook' },
+      { url: 'https://ww.dooballfree.vip/live/amarintv/playlist.m3u8?v=2', suffix: 'HD Kratook Duplicated' },
+      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=amarin', priority: 1, suffix: '[เสีย]' },
     ],
   },
 
@@ -258,7 +248,7 @@ const streamingInfo = {
         url: 'https://ww.dooballfree.vip/live/ch7hd/playlist.m3u8',
         suffix: 'FHD Kratook',
       },
-      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=ch7', priority: 1 },
+      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=ch7', priority: 1, suffix: '[เสีย]' },
     ],
   },
 
@@ -268,7 +258,7 @@ const streamingInfo = {
     // tvgId: 'PPTVHD36.th',
     sources: [
       { url: 'https://ww.dooballfree.vip/live/pptv/playlist.m3u8', suffix: 'FHD Kratook' },
-      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=pptv', priority: 1 },
+      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=pptv', priority: 1, suffix: '[เสีย]' },
     ],
   },
 
@@ -356,8 +346,8 @@ const streamingInfo = {
     groupName: 'Sport',
     sources: [
       {
-        url: 'http://thangap.ddns.net:8080/proxy/vip/monomax1/chunks.m3u8',
-        priority: 21,
+        url: 'http://thangap.ddns.net:3000/keela4.m3u8?q=monomax1',
+        options: { userAgent: 'VLC/3.0.11 LibVLC' },
       },
     ],
   },
@@ -370,7 +360,6 @@ const streamingInfo = {
     sources: [
       {
         url: 'http://thangap.ddns.net:8080/proxy/vip/monomax2/chunks.m3u8',
-        priority: 21,
       },
     ],
   },
@@ -406,6 +395,26 @@ const streamingInfo = {
       { url: 'rtsp://admin@192.168.1.200/user=admin&password=&channel=10&stream=1.sdp?', suffix: '10 Com-Ying' },
       { url: 'rtsp://admin@192.168.1.200/user=admin&password=&channel=11&stream=1.sdp?', suffix: '11 Bed-1' },
       { url: 'rtsp://admin@192.168.1.200/user=admin&password=&channel=12&stream=1.sdp?', suffix: '12 Bed-2' },
+    ],
+  },
+
+  blank: {
+    channelName: 'Blank',
+    logo: 'https://iptv36.vercel.app/logo/info.png',
+    groupName: 'Blank',
+    sources: [
+      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=blank1', priority: -1, suffix: '01' },
+      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=blank2', priority: -2, suffix: '02' },
+      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=blank3', priority: -3, suffix: '03' },
+      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=blank4', priority: -4, suffix: '04' },
+      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=blank5', priority: -5, suffix: '05' },
+      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=blank6', priority: -6, suffix: '06' },
+      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=blank7', priority: -7, suffix: '07' },
+      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=blank8', priority: -8, suffix: '08' },
+      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=blank9', priority: -9, suffix: '09' },
+      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=blank10', priority: -10, suffix: '10' },
+      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=blank11', priority: -11, suffix: '11' },
+      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=blank12', priority: -12, suffix: '12' },
     ],
   },
 };
