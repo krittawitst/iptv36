@@ -43,7 +43,7 @@ const main = async () => {
     await Promise.all(
       uniqueChannelKeyForThisPlaylist.map(async (channelKey) => {
         await streaming.getStreamingInfo(channelKey);
-      })
+      }),
     );
 
     // generate playlist file
