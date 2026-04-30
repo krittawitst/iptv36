@@ -16,7 +16,7 @@ const playlistV1 = {
     // 11-20
     ['nbtcentral'],
     ['blank', 12],
-    ['workpoint', 1],
+    ['blank', 13],
     ['blank', 14],
     ['blank', 15],
     ['tnn16'],

@@ -94,7 +94,10 @@ const streamingInfo = {
     logo: 'https://iptv36.vercel.app/logo/workpoint.png',
     // tvgId: 'Workpoint23.th',
     sources: [
-      { url: 'https://global-media.sooplive.com/live/workpoint/master.m3u8', suffix: 'FHD' },
+      {
+        url: 'https://live-global-cdn-v02.sooplive.com/live-stm-06/auth_master_playlist.m3u8?aid=.A32.pxqRXFPZNcY9Qg1.EnmOfNtainuqWaDjPeKqiaC8rw4Nq1wVQDNGB03OPuB2SjM_84zZh13mfgQdKPgNm12X8ILdrtefKkktWjXed6ieaJQ5KCRoyr7lXjGDERCjDXvy_goBzgs2oh_-vrUdoyMpqknq-FVtMwmfK_5MqHGsK_5mRERpQWC2McRsVlR4cUi5mjMxyBxHTbJF6lTNCtxGVro9yW_PYP8cBJ36Vg',
+        suffix: 'FHD',
+      },
       { url: 'https://cco-streamer2.cdn.3bbtv.com:8443/3bb/live/23/23.mpd' },
       { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=workpoint', priority: 1, suffix: '[เสีย]' },
     ],
@@ -117,7 +120,7 @@ const streamingInfo = {
     // tvgId: 'GMM25.th',
     sources: [
       {
-        url: 'https://bcovlive-a.akamaihd.net/57d4bf695e80436d9335f4f50adbe438/ap-southeast-1/6415628290001/7e85dc4a59904e45b4fdffebd62e1d82/playlist_ssaiM.m3u8',
+        url: 'https://fastly.live.brightcove.com/6392745120112/ap-southeast-1/6415628290001/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJob3N0IjoicWN6dGF6LmVncmVzcy5wcHRpOHciLCJhY2NvdW50X2lkIjoiNjQxNTYyODI5MDAwMSIsImVobiI6ImZhc3RseS5saXZlLmJyaWdodGNvdmUuY29tIiwiaXNzIjoiYmxpdmUtcGxheWJhY2stc291cmNlLWFwaSIsInN1YiI6InBhdGhtYXB0b2tlbiIsImF1ZCI6WyI2NDE1NjI4MjkwMDAxIl0sImp0aSI6IjYzOTI3NDUxMjAxMTIifQ.w9Q_oqsE_WFClGF5tLVDtHnz5zfHHgNpumxVYNx4yYw/playlist-hls.m3u8',
         suffix: 'FHD',
       },
       { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=gmm25', priority: 1, suffix: '[เสีย]' },
@@ -182,13 +185,8 @@ const streamingInfo = {
     // tvgId: 'One31.th',
     sources: [
       {
-        url: 'https://bcovlive-a.akamaihd.net/b6603a14ea59440a95e9235e14bc9332/ap-southeast-1/6415628290001/9c3d7fc7d10840a69e48b5939ae886e0/playlist_ssaiM.m3u8',
+        url: 'https://fastly.live.brightcove.com/6393158620112/ap-southeast-1/6415628290001/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJob3N0IjoicWN6dGF6LmVncmVzcy5wcHRpOHciLCJhY2NvdW50X2lkIjoiNjQxNTYyODI5MDAwMSIsImVobiI6ImZhc3RseS5saXZlLmJyaWdodGNvdmUuY29tIiwiaXNzIjoiYmxpdmUtcGxheWJhY2stc291cmNlLWFwaSIsInN1YiI6InBhdGhtYXB0b2tlbiIsImF1ZCI6WyI2NDE1NjI4MjkwMDAxIl0sImp0aSI6IjYzOTMxNTg2MjAxMTIifQ.Pv-kHDlJaV05HiJ2AQmS3PnV2ZQg7ovszKptAGg1EN0/playlist-hls.m3u8',
         suffix: 'FHD',
-        priority: 31,
-      },
-      {
-        url: 'https://bcovlive-a.akamaihd.net/b6603a14ea59440a95e9235e14bc9332/ap-southeast-1/6415628290001/9c3d7fc7d10840a69e48b5939ae886e0/playlist_ssaiM.m3u8?v=1',
-        suffix: 'FHD (Duplicated)',
       },
       { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=one', priority: 1, suffix: '[เสีย]' },
     ],
