@@ -103,7 +103,7 @@ const streamingInfo = {
         url: 'https://live-global-cdn-v02.sooplive.com/live-stmc-37/auth_master_playlist.m3u8?aid=.A32.pxqRXFPZNcY9Qg1.ewOJxxA0oDs8U-8CHLTO50HT6nUiCYyYyg_YfEFRdcralBB1ICQ_BcrqFQX8IacgdkIgznvzHcXB63ePFS6h9B-QjDlVl7ld68-kgRZwdID4DyxAnew9aOab3evF8d9MY-VpqCLyJI0IIrxAXf-EpYcUQXvqWvJVCfMQtfRB9nG0yY53JpH3CdYgAv2YgRiAm_K_RHr34ai-xWxIJdAXAA',
         suffix: 'FHD',
       },
-      { url: 'https://cco-streamer2.cdn.3bbtv.com:8443/3bb/live/23/23.mpd' },
+      { url: 'https://cco-streamer2.cdn.3bbtv.com:8443/3bb/live/23/23.mpd', suffix: 'MPD' },
       { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=workpoint', priority: 1, suffix: '[เสีย]' },
     ],
   },
@@ -114,7 +114,7 @@ const streamingInfo = {
     tvgId: 'True24',
     sources: [
       { url: 'https://iptv36.vercel.app/api/true.m3u8?channel=true4u', suffix: 'HD' },
-      // { url: 'https://cco-streamer2.cdn.3bbtv.com:8443/3bb/live/24/24.mpd' },
+      { url: 'https://lb-gmmz.sky-cdn.com/gmm/true24.m3u8' },
       { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=true4u', priority: 1, suffix: '[เสีย]' },
     ],
   },
@@ -137,7 +137,6 @@ const streamingInfo = {
     logo: 'https://iptv36.vercel.app/logo/ch8.png',
     tvgId: 'ช่อง8',
     sources: [
-      { url: 'https://prsmedia-mykojh.cdn.byteark.com/fleetstream/live/720p/index.m3u8', suffix: 'HD' },
       { url: 'https://cco-streamer2.cdn.3bbtv.com:8443/3bb/live/27/27.mpd' },
       { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=ch8', priority: 1, suffix: '[เสีย]' },
     ],
@@ -200,14 +199,14 @@ const streamingInfo = {
   thairath: {
     channelName: 'Thairath TV',
     logo: 'https://iptv36.vercel.app/logo/thairath.png',
-    tvgId: 'Thairath',
+    tvgId: 'TRATH.th',
     sources: [
       {
         url: 'https://ssai-streaming.thairath.co.th/bamm-csai/720p/index.m3u8',
         options: { referer: 'https://www.thairath.co.th/' },
         suffix: 'HD',
       },
-      { url: 'https://ssai-streaming.thairath.co.th/bamm-csai/playlist.m3u8', suffix: 'HD', priority: 19 },
+      { url: 'https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/32/32.mpd', suffix: 'FHD' },
       { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=thairath', priority: 1, suffix: '[เสีย]' },
     ],
   },
@@ -551,8 +550,7 @@ const testUrl = async (url, options = {}) => {
     process.env.VERCEL &&
     (url.includes('ch7.com') || // Geo Restrict
       url.includes('pptv36-9h0yba.cdn.byteark.com') || // Geo Restrictt
-      url.includes('3bb.co.th') ||
-      url.includes('3bbtv.com') ||
+      url.includes('lb-gmmz.sky-cdn.com') ||
       url.includes('prsmedia') ||
       url.includes('dailymotion.com') ||
       url.includes('iptv36.vercel.app/api/'))

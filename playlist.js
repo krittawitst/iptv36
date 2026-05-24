@@ -72,6 +72,7 @@ const channelListWithBackupChannel = [
   ['mcot', 1],
   ['one'],
   ['thairath'],
+  ['thairath', 1],
   ['amarin'],
   ['amarin', 1],
   ['ch7'],
