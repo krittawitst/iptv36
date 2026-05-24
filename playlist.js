@@ -52,6 +52,7 @@ const channelListWithBackupChannel = [
   ['nbt'],
   ['thaipbs'],
   ['tv5'],
+  ['tsports'],
   ['tptv'],
   ['nbtcentral'],
   ['tnn16'],
@@ -65,7 +66,6 @@ const channelListWithBackupChannel = [
   // 11-20
   ['ch8'],
   ['ch8', 1],
-  ['ch8', 2],
   ['mono29'],
   ['mono29soundtrack'],
   ['mcot'],
@@ -74,6 +74,7 @@ const channelListWithBackupChannel = [
   ['one', 1],
   ['thairath'],
   ['thairath', 1],
+  ['ch3'],
   ['amarin'],
   ['amarin', 1],
   ['ch7'],

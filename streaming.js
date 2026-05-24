@@ -37,6 +37,7 @@ const streamingInfo = {
     tvgId: 'TV5.th',
     sources: [
       { url: 'https://639bc5877c5fe.streamlock.net/tv5hdlive/tv5hdlive/playlist.m3u8', suffix: 'FHD' },
+      { url: 'https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/5/5.mpd', suffix: 'FHD', priority: 29 },
       { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=tv5', suffix: '[เสีย]' },
     ],
   },
@@ -45,7 +46,10 @@ const streamingInfo = {
     channelName: 'T-Sports',
     logo: 'https://iptv36.vercel.app/logo/tsports.png',
     tvgId: 'TSPORT7.th',
-    sources: [{ url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=tsports', suffix: '[เสีย]' }],
+    sources: [
+      { url: 'https://udn-streamer1.cdn.3bbtv.com:8443/3bb/live/7/7.mpd' },
+      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=tsports', suffix: '[เสีย]' },
+    ],
   },
 
   tptv: {
@@ -103,7 +107,9 @@ const streamingInfo = {
         url: 'https://live-global-cdn-v02.sooplive.com/live-stmc-37/auth_master_playlist.m3u8?aid=.A32.pxqRXFPZNcY9Qg1.ewOJxxA0oDs8U-8CHLTO50HT6nUiCYyYyg_YfEFRdcralBB1ICQ_BcrqFQX8IacgdkIgznvzHcXB63ePFS6h9B-QjDlVl7ld68-kgRZwdID4DyxAnew9aOab3evF8d9MY-VpqCLyJI0IIrxAXf-EpYcUQXvqWvJVCfMQtfRB9nG0yY53JpH3CdYgAv2YgRiAm_K_RHr34ai-xWxIJdAXAA',
         suffix: 'FHD',
       },
-      { url: 'https://cco-streamer2.cdn.3bbtv.com:8443/3bb/live/23/23.mpd', suffix: 'MPD' },
+      { url: 'https://lb-gmmz.sky-cdn.com/gmm/workpoint.m3u8', priority: 9 },
+      { url: 'https://cco-streamer2.cdn.3bbtv.com:8443/3bb/live/23/23.mpd', priority: 8 },
+      { url: 'https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/23/23.mpd', priority: 7 },
       { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=workpoint', priority: 1, suffix: '[เสีย]' },
     ],
   },
@@ -140,9 +146,9 @@ const streamingInfo = {
     logo: 'https://iptv36.vercel.app/logo/ch8.png',
     tvgId: 'CH8.th',
     sources: [
-      { url: 'https://cco-streamer2.cdn.3bbtv.com:8443/3bb/live/27/27.mpd', suffix: 'mpd cco' },
-      { url: 'https://lb-gmmz.sky-cdn.com/gmm/ch8.m3u8', suffix: 'gmm' },
-      { url: 'https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/27/27.mpd', suffix: 'mpd cri' },
+      { url: 'https://lb-gmmz.sky-cdn.com/gmm/ch8.m3u8', priority: 9 },
+      { url: 'https://cco-streamer2.cdn.3bbtv.com:8443/3bb/live/27/27.mpd', priority: 8 },
+      { url: 'https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/27/27.mpd', priority: 7 },
       { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=ch8', priority: 1, suffix: '[เสีย]' },
     ],
   },
@@ -180,6 +186,7 @@ const streamingInfo = {
         url: 'https://mcothd-streaming-edge-cdn.mcot.net/tencentmcot/smil:tencentmcot.smil/playlist.m3u8',
         suffix: 'FHD',
       },
+      { url: 'https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/30/30.mpd', suffix: 'FHD', priority: 29 },
       { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=mcot', priority: 1, suffix: '[เสีย]' },
     ],
   },
@@ -218,7 +225,10 @@ const streamingInfo = {
     channelName: 'CH3',
     logo: 'https://iptv36.vercel.app/logo/ch3.png',
     tvgId: '3HD.th',
-    sources: [{ url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=ch3', priority: 1, suffix: '[เสีย]' }],
+    sources: [
+      { url: 'https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/33/33.mpd', suffix: 'FHD' },
+      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=ch3', priority: 1, suffix: '[เสีย]' },
+    ],
   },
 
   amarin: {
