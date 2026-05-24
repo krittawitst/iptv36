@@ -8,15 +8,15 @@ const currentDatetimePlus7Hrs = new Date(currentEpochDatetime + 7 * 60 * 60 * 10
 const currentBkkDatetimeStr = currentDatetimePlus7Hrs.toISOString().slice(0, 16);
 
 const main = async () => {
-  // prefetch epg data
-  let epgDataPromise;
+  // // prefetch epg data
+  // let epgDataPromise;
 
-  if (true /*!process.env.VERCEL*/) {
-    epgDataPromise = getEpgData();
-  }
+  // if (true /*!process.env.VERCEL*/) {
+  //   epgDataPromise = getEpgData();
+  // }
 
   // dynamically add streaming url
-  await streaming.dynamicallyAddStreamingUrlFromPPTV();
+  // await streaming.dynamicallyAddStreamingUrlFromPPTV();
   // await streaming.dynamicallyAddStreamingUrlFromByteArkNextData();
 
   // remember all active channel key to build epg
@@ -85,51 +85,51 @@ const main = async () => {
     console.log(`==> Created playlist '${playlist.filename}'`);
   }
 
-  // generate XMLTV EPG file
-  if (true /* !process.env.NETLIFY */) {
-    allActiveChannelKey = Array.from(new Set(allActiveChannelKey));
-    const epgData = await epgDataPromise;
+  //   // generate XMLTV EPG file
+  //   if (true /* !process.env.NETLIFY */) {
+  //     allActiveChannelKey = Array.from(new Set(allActiveChannelKey));
+  //     const epgData = await epgDataPromise;
 
-    let xmlHead = `<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tv SYSTEM "xmltv.dtd">
-<tv>
-`;
-    let xmlTail = '</tv>';
+  //     let xmlHead = `<?xml version="1.0" encoding="UTF-8"?>
+  // <!DOCTYPE tv SYSTEM "xmltv.dtd">
+  // <tv>
+  // `;
+  //     let xmlTail = '</tv>';
 
-    let availableTvgId = [];
+  //     let availableTvgId = [];
 
-    let xmlProgramBody = '';
-    for (let epg of epgData) {
-      if (!allActiveChannelKey.includes(epg.channelKey)) {
-        continue;
-      }
+  //     let xmlProgramBody = '';
+  //     for (let epg of epgData) {
+  //       if (!allActiveChannelKey.includes(epg.channelKey)) {
+  //         continue;
+  //       }
 
-      let tvgId = `iptv36.${epg.channelKey}`;
-      xmlProgramBody += `  <programme start="${epg.programStartStr}" `;
-      xmlProgramBody += epg.programEndStr ? `stop="${epg.programEndStr}" ` : '';
-      xmlProgramBody += `channel="${tvgId}">\n`;
-      xmlProgramBody += `    <title><![CDATA[${epg.programTitle}]]></title>\n`;
-      if (epg.programSubtitle) {
-        xmlProgramBody += `    <sub-title><![CDATA[${epg.programSubtitle}]]></sub-title>\n`;
-      }
-      if (epg.programDescription) {
-        xmlProgramBody += `    <desc><![CDATA[${epg.programDescription}]]></desc>\n`;
-      }
-      xmlProgramBody += `  </programme>\n`;
+  //       let tvgId = `iptv36.${epg.channelKey}`;
+  //       xmlProgramBody += `  <programme start="${epg.programStartStr}" `;
+  //       xmlProgramBody += epg.programEndStr ? `stop="${epg.programEndStr}" ` : '';
+  //       xmlProgramBody += `channel="${tvgId}">\n`;
+  //       xmlProgramBody += `    <title><![CDATA[${epg.programTitle}]]></title>\n`;
+  //       if (epg.programSubtitle) {
+  //         xmlProgramBody += `    <sub-title><![CDATA[${epg.programSubtitle}]]></sub-title>\n`;
+  //       }
+  //       if (epg.programDescription) {
+  //         xmlProgramBody += `    <desc><![CDATA[${epg.programDescription}]]></desc>\n`;
+  //       }
+  //       xmlProgramBody += `  </programme>\n`;
 
-      availableTvgId.push(tvgId);
-    }
+  //       availableTvgId.push(tvgId);
+  //     }
 
-    let xmlChannelBody = '';
-    for (let tvgId of new Set(availableTvgId)) {
-      xmlChannelBody += `  <channel id="${tvgId}">\n`;
-      xmlChannelBody += `    <display-name>${tvgId}</display-name>\n`;
-      xmlChannelBody += `  </channel>\n`;
-    }
+  //     let xmlChannelBody = '';
+  //     for (let tvgId of new Set(availableTvgId)) {
+  //       xmlChannelBody += `  <channel id="${tvgId}">\n`;
+  //       xmlChannelBody += `    <display-name>${tvgId}</display-name>\n`;
+  //       xmlChannelBody += `  </channel>\n`;
+  //     }
 
-    fs.writeFileSync('epg.xml', xmlHead + xmlChannelBody + xmlProgramBody + xmlTail, 'utf8');
-    console.log(`\n==> Created EPG 'epg.xml'`);
-  }
+  //     fs.writeFileSync('epg.xml', xmlHead + xmlChannelBody + xmlProgramBody + xmlTail, 'utf8');
+  //     console.log(`\n==> Created EPG 'epg.xml'`);
+  //   }
 };
 
 main();
