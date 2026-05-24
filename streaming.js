@@ -74,7 +74,7 @@ const streamingInfo = {
     sources: [
       { url: 'https://lb-gmmz.sky-cdn.com/gmm/tnn16.m3u8' },
       { url: 'https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/16/16.mpd', suffix: 'MPD' },
-      // { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=tnn16', suffix: '[เสีย]' },
+      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=tnn16', priority: 1, suffix: '[เสีย]' },
     ],
   },
 
@@ -90,7 +90,7 @@ const streamingInfo = {
       },
       { url: 'https://lb-gmmz.sky-cdn.com/gmm/nation.m3u8' },
       { url: 'https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/22/22.mpd', suffix: 'MPD' },
-      // { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=nation', priority: 1, suffix: '[เสีย]' },
+      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=nation', priority: 1, suffix: '[เสีย]' },
     ],
   },
 
@@ -115,7 +115,7 @@ const streamingInfo = {
     sources: [
       { url: 'https://iptv36.vercel.app/api/true.m3u8?channel=true4u', suffix: 'HD' },
       // { url: 'https://cco-streamer2.cdn.3bbtv.com:8443/3bb/live/24/24.mpd' },
-      // { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=true4u', priority: 1, suffix: '[เสีย]' },
+      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=true4u', priority: 1, suffix: '[เสีย]' },
     ],
   },
 
@@ -223,7 +223,11 @@ const streamingInfo = {
     channelName: 'Amarin TV',
     logo: 'https://iptv36.vercel.app/logo/amarin.png',
     tvgId: 'Amarin',
-    sources: [{ url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=amarin', priority: 1, suffix: '[เสีย]' }],
+    sources: [
+      { url: 'https://lb-gmmz.sky-cdn.com/gmm/amarin.m3u8' },
+      { url: 'https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/34/34.mpd', suffix: 'MPD' },
+      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=amarin', priority: 1, suffix: '[เสีย]' },
+    ],
   },
 
   ch7: {
@@ -244,7 +248,11 @@ const streamingInfo = {
     channelName: 'PPTV',
     logo: 'https://iptv36.vercel.app/logo/pptv.png',
     tvgId: 'PPTV',
-    sources: [{ url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=pptv', priority: 1, suffix: '[เสีย]' }],
+    sources: [
+      { url: 'https://lb-gmmz.sky-cdn.com/gmm/pptv.m3u8' },
+      { url: 'https://www.livedoomovies.com:4431/02_PPTVHD_720p/playlist.m3u8' },
+      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=pptv', priority: 1, suffix: '[เสีย]' },
+    ],
   },
 
   bein1: {
@@ -634,6 +642,8 @@ const getStreamingInfo = async (channelKey, skip = 0) => {
   if (source === undefined) {
     console.log({ msg: 'error when getStreamingInfo', channelKey, skip, streamingData });
   }
+
+  // console.log(source);
 
   if (source.suffix) {
     channelNameComponent.push(source.suffix);

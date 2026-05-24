@@ -14,7 +14,7 @@
     },
     {
       "source": "/epg.xml",
-      "destination": "https://raw.githubusercontent.com/akkradet/IPTV-THAI/refs/heads/master/guide.xml/",
+      "destination": "https://raw.githubusercontent.com/akkradet/IPTV-THAI/refs/heads/master/guide.xml",
       "permanent": false
     },
     {

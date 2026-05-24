@@ -54,7 +54,10 @@ const channelListWithBackupChannel = [
   ['tv5'],
   ['tptv'],
   ['nbtcentral'],
+  ['tnn16'],
+  ['tnn16', 1],
   ['nation'],
+  ['nation', 1],
   ['workpoint'],
   ['workpoint', 1],
   ['true4u'],
@@ -69,8 +72,11 @@ const channelListWithBackupChannel = [
   ['mcot', 1],
   ['one'],
   ['thairath'],
+  ['amarin'],
+  ['amarin', 1],
   ['ch7'],
   ['pptv'],
+  ['pptv', 1],
 ];
 
 const playlistV2 = {
