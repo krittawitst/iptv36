@@ -10,7 +10,7 @@ const streamingInfo = {
   nbt: {
     channelName: 'NBT',
     logo: 'https://iptv36.vercel.app/logo/nbt.png?v=4',
-    tvgId: 'NBT',
+    // tvgId: 'NBT',
     sources: [
       {
         url: 'https://cdn-edge.iiptvcdn.com/live_event/smil:1180-0c9c-ad1f-4e5d-aa48.smil/playlist.m3u8',
@@ -23,7 +23,7 @@ const streamingInfo = {
   thaipbs: {
     channelName: 'Thai PBS',
     logo: 'https://iptv36.vercel.app/logo/thaipbs.png',
-    tvgId: 'TPBS',
+    // tvgId: 'TPBS',
     sources: [
       { url: 'https://thaipbs-live.cdn.byteark.com/live/playlist.m3u8', suffix: 'FHD' },
       { url: 'https://thaipbs-ophctt.cdn.byteark.com/live/playlist.m3u8', suffix: 'FHD', priority: 29 },
@@ -34,7 +34,7 @@ const streamingInfo = {
   tv5: {
     channelName: 'TV5',
     logo: 'https://iptv36.vercel.app/logo/tv5.png',
-    tvgId: 'TV5.th',
+    // tvgId: 'TV5.th',
     sources: [
       { url: 'https://639bc5877c5fe.streamlock.net/tv5hdlive/tv5hdlive/playlist.m3u8', suffix: 'FHD' },
       { url: 'https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/5/5.mpd', suffix: 'FHD', priority: 29 },
@@ -55,7 +55,7 @@ const streamingInfo = {
   tptv: {
     channelName: 'TPTV',
     logo: 'https://iptv36.vercel.app/logo/tptv.png',
-    tvgId: 'TPTV',
+    // tvgId: 'TPTV',
     sources: [{ url: 'https://tv-live.tpchannel.org/live/tv_1080p.m3u8?vhost=tv-live.tpchannel.org', suffix: 'FHD' }],
   },
 
@@ -85,7 +85,7 @@ const streamingInfo = {
   nation: {
     channelName: 'Nation TV',
     logo: 'https://iptv36.vercel.app/logo/nation.png',
-    tvgId: 'Nation',
+    // tvgId: 'Nation',
     sources: [
       {
         url: 'https://nationtv-1jdcjo.cdn.byteark.com/fleetstream/nationtvlive/index.m3u8',
@@ -179,7 +179,7 @@ const streamingInfo = {
   mcot: {
     channelName: 'MCOT',
     logo: 'https://iptv36.vercel.app/logo/mcot.png',
-    tvgId: 'MCOT',
+    // tvgId: 'MCOT',
     sources: [
       { url: 'https://cco-streamer2.cdn.3bbtv.com:8443/3bb/live/30/30.mpd', suffix: 'FHD', priority: 35 },
       {
@@ -200,7 +200,7 @@ const streamingInfo = {
         url: 'https://fastly.live.brightcove.com/6393158620112/ap-southeast-1/6415628290001/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJob3N0IjoicWN6dGF6LmVncmVzcy5wcHRpOHciLCJhY2NvdW50X2lkIjoiNjQxNTYyODI5MDAwMSIsImVobiI6ImZhc3RseS5saXZlLmJyaWdodGNvdmUuY29tIiwiaXNzIjoiYmxpdmUtcGxheWJhY2stc291cmNlLWFwaSIsInN1YiI6InBhdGhtYXB0b2tlbiIsImF1ZCI6WyI2NDE1NjI4MjkwMDAxIl0sImp0aSI6IjYzOTMxNTg2MjAxMTIifQ.Pv-kHDlJaV05HiJ2AQmS3PnV2ZQg7ovszKptAGg1EN0/playlist-hls.m3u8',
         suffix: 'FHD',
       },
-      { url: 'https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/31/31.mpd', suffix: 'MPD' },
+      { url: 'https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/31/31.mpd', suffix: 'FHD' },
       { url: 'https://lb-gmmz.sky-cdn.com/gmm/one.m3u8', suffix: 'HD' },
       { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=one', priority: 1, suffix: '[เสีย]' },
     ],
@@ -226,7 +226,7 @@ const streamingInfo = {
     logo: 'https://iptv36.vercel.app/logo/ch3.png',
     tvgId: '3HD.th',
     sources: [
-      { url: 'https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/33/33.mpd', suffix: 'FHD' },
+      // { url: 'https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/33/33.mpd', suffix: 'FHD' },
       { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=ch3', priority: 1, suffix: '[เสีย]' },
     ],
   },
@@ -261,8 +261,8 @@ const streamingInfo = {
     logo: 'https://iptv36.vercel.app/logo/pptv.png',
     tvgId: 'PPTV.th',
     sources: [
-      { url: 'https://lb-gmmz.sky-cdn.com/gmm/pptv.m3u8' },
-      { url: 'https://www.livedoomovies.com:4431/02_PPTVHD_720p/playlist.m3u8' },
+      { url: 'https://lb-gmmz.sky-cdn.com/gmm/pptv.m3u8', priority: 21, suffix: 'HD' },
+      { url: 'https://www.livedoomovies.com:4431/02_PPTVHD_720p/playlist.m3u8', suffix: 'HD' },
       { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=pptv', priority: 1, suffix: '[เสีย]' },
     ],
   },
