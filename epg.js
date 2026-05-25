@@ -88,103 +88,72 @@ const getEpgDataFromNbtc = async () => {
   return epgData;
 };
 
-const getEpgDataFromAisPlay = async () => {
-  console.log('Fetching epg data from AIS PLAY...');
+const getEpgDataFrom3bb = async () => {
+  console.log('Fetching epg data from 3BB...');
 
   // mapping tvg id
   let channelIdToChannelKey = {
-    '5f9e908c12008d9caab3cf3b': 'nbt',
-    '6378ef895b10cf050fd01614': 'thaipbs',
-    '5efdd162fbb0045345ef2b61': 'altv',
-    '5b335ab3d817de6d62889a6b': 'tv5',
-    '627a27b26dbfe345cfc8a27f': 'tsports',
-    '597be02d7ed5a24e46f67254': 'tptv',
-    '59671d1cd817de1df19711a6': 'tnn16',
-    '637b3a816d6b13ecd5676af4': 'jkn18',
-    '6378f08337d179394ce585f4': 'nation',
-    '632f2696fd54ec81809f7920': 'workpoint',
-    '5b3359d9bf6aee16d7459c25': 'true4u',
-    '5a702c48d817de6932b0db7a': 'gmm25',
-    '5a127510d817de0fae3b6f2c': 'ch8',
-    '60811938fa3813c616f38b63': 'mono29',
-    '5efec3f10f6d9dc4b26c6e77': 'mcot',
-    '5a1685baaae731375f0eb728': 'one',
-    '60bd9c7b497960d3f9a3e222': 'thairath',
-    '59592e08bf6aee4e3ecce051': 'ch3',
-    '5b335b61bf6aee16d8c33382': 'amarin',
-    '5abdd28daae73161cb8ef446': 'ch7',
-    '5d4bebb6aae7315312049035': 'pptv',
-    // '5fdb33c120ccacf849c813ef': 'voice',
-    // '5ee1eb4d0f24872fd951d196': 'paramount',
-    // '597e004b7ed5a24e46f6725a': 'warnertv',
-    // '5e44faeeaae73158d325f8f9': 'hitsmovies',
-    // '59ab204faae7311c5f0cc5ea': 'blueantent',
-    // '63ca444c1eb6dd945e497d3f': 'mono29plus',
-    // '605dad7dcebeb6db82829183': 'topnews',
-    '5e69984f609ced33cfa4e734': 'bein1',
-    '61c5829074626a5b6513d909': 'bein2',
-    '5e699a69bf6aee30a499dc9b': 'bein3',
-    // '5a52f069aae731507f5387bb': 'cartoonnetwork',
-    // '5d424cdbaae73145f7f2b675': 'toonee',
-    // '5ee1ecafb544d498b9d1d2e8': 'nickelodeon',
-    // '597d21477ed5a24e46f67258': 'cartoonclub',
-    // '5e6215e6d817de33506cedf7': 'discoveryasia',
-    '597dfea47ed5a24e46f67259': 'boomerang',
-    // '5967375cbf6aee05dcdfc126': 'tvb',
-    // '597fff9d7ed5a20c8ae865d9': 'mangkorn',
-    // '6501774d8ffee1f226fe8300': 'samrujlok',
+    2: 'nbt',
+    3: 'thaipbs',
+    5: 'tv5',
+    7: 'tsports',
+    10: 'tptv',
+    16: 'tnn16',
+    22: 'nation',
+    23: 'workpoint',
+    24: 'true4u',
+    25: 'gmm25',
+    27: 'ch8',
+    29: 'mono29',
+    30: 'mcot',
+    31: 'one',
+    32: 'thairath',
+    33: 'ch3',
+    34: 'amarin',
+    35: 'ch7',
+    36: 'pptv',
   };
 
-  // build parameter
-  let currentDatetime = new Date();
-  let currentDatetimePlus7Hrs = new Date(currentDatetime.getTime() + 7 * 3600 * 1000);
-  let currentDatetimePlus55Hrs = new Date(currentDatetime.getTime() + 55 * 3600 * 1000);
-  let startBkkDateStr = currentDatetimePlus7Hrs.toISOString().slice(0, 10);
-  let startBkkTimeStr = currentDatetimePlus7Hrs.toISOString().slice(11, 16) + ':00';
-  let endBkkDateStr = currentDatetimePlus55Hrs.toISOString().slice(0, 10);
-  let endBkkTimeStr = currentDatetimePlus55Hrs.toISOString().slice(11, 16) + ':00';
+  const allData = await Promise.all(
+    Object.keys(channelIdToChannelKey).map(async (channelId) => {
+      let epgUrl = `https://gigatv.3bbtv.co.th/wp-content/themes/changwattana/epg/${channelId}.json`;
+      // console.log(epgUrl);
 
-  // send request
-  let rawData = {};
-  try {
-    let epgUrl = `https://aisplay.ais.co.th/epg/?start_date=${startBkkDateStr}&end_date=${endBkkDateStr}&start_time=${startBkkTimeStr}&end_time=${endBkkTimeStr}&items=`;
-    epgUrl += Object.keys(channelIdToChannelKey).join();
-    const response = await axios.get(epgUrl, {
-      httpsAgent: new https.Agent({
-        rejectUnauthorized: false, // ignore Unable to verify the first certificate error
-      }),
-    });
-    rawData = response.data;
-  } catch (error) {
-    console.log(error);
-  }
+      try {
+        const response = await axios.get(epgUrl);
+        if (response.data && Array.isArray(response.data)) {
+          return response.data;
+        } else {
+          console.log(`response from ${epgUrl} is undefined or not an array`);
+          return [];
+        }
+      } catch (error) {
+        console.log(error);
+        return [];
+      }
+    }),
+  );
 
   // process data
   let epgData = [];
 
-  if (rawData.items === undefined) {
-    return [];
-  }
-
-  for (let item of rawData.items) {
-    let channelKey = channelIdToChannelKey[item.parent];
-    let programStartStr = `${item.date}${item.start}`.replace(/-|:|T/g, '') + ' +0700';
-    let programEndStr = `${item.date_end}${item.end}`.replace(/-|:|T/g, '') + ' +0700';
-    let programTitle = item.title ? item.title.trim() : 'No Program Name';
-    let programDescription = undefined;
-    if (item.synopsis && item.synopsis.trim() && item.synopsis !== item.title) {
-      programDescription = item.synopsis.trim();
+  for (const dataOfThisChannel of allData) {
+    for (const item of dataOfThisChannel) {
+      let channelKey = channelIdToChannelKey[item.channelID];
+      let programStartStr = item.startTime.replace(/-|:| /g, '') + ' +0700';
+      let programEndStr = item.endTime.replace(/-|:| /g, '') + ' +0700';
+      let programTitle = item.programName ? item.programName.trim() : 'No Program Name';
+      let programDescription = undefined;
+      epgData.push({
+        programStartStr,
+        programEndStr,
+        channelKey,
+        programTitle,
+        programDescription,
+      });
     }
-    epgData.push({
-      programStartStr,
-      programEndStr,
-      channelKey,
-      programTitle,
-      programDescription,
-    });
   }
 
-  // console.log(`  / Fetched epg data from AIS Play...`);
   return epgData;
 };
 
@@ -223,7 +192,7 @@ const getEpgDataFromTrueId = async () => {
             // The request was made and the server responded with a status code
             // that falls out of the range of 2xx
             console.log(
-              `trueid_epg response error on ${channelSlug} => ${error.response.status}: ${error.response.data}`
+              `trueid_epg response error on ${channelSlug} => ${error.response.status}: ${error.response.data}`,
             );
           } else if (error.request) {
             // The request was made but no response was received
@@ -236,7 +205,7 @@ const getEpgDataFromTrueId = async () => {
           }
         }
       })
-      .filter((a) => a !== null && a !== undefined)
+      .filter((a) => a !== null && a !== undefined),
   );
 
   // process data
@@ -270,26 +239,26 @@ const getEpgDataFromTrueId = async () => {
 const getEpgData = async () => {
   // EPG
   let epgDataFromNbtcPromise = getEpgDataFromNbtc();
-  let epgDataFromAisPlayPromise = getEpgDataFromAisPlay();
+  let epgDataFrom3bbPromise = getEpgDataFrom3bb();
   let epgDataFromTrueIdPromise = getEpgDataFromTrueId();
 
-  const [epgDataFromNbtc, epgDataFromAisPlay, epgDataFromTrueId] = await Promise.all([
+  const [epgDataFromNbtc, epgDataFrom3bb, epgDataFromTrueId] = await Promise.all([
     epgDataFromNbtcPromise,
-    epgDataFromAisPlayPromise,
+    epgDataFrom3bbPromise,
     epgDataFromTrueIdPromise,
   ]);
 
-  let mergedEpgData = [...epgDataFromNbtc, ...epgDataFromAisPlay, ...epgDataFromTrueId];
+  let mergedEpgData = [...epgDataFromNbtc, ...epgDataFrom3bb, ...epgDataFromTrueId];
   mergedEpgData = mergedEpgData.sort((item1, item2) =>
     item1.channelKey > item2.channelKey
       ? 1
       : item1.channelKey < item2.channelKey
-      ? -1
-      : 0 || item1.programStartStr > item2.programStartStr
-      ? 1
-      : item1.programStartStr < item2.programStartStr
-      ? -1
-      : 0
+        ? -1
+        : 0 || item1.programStartStr > item2.programStartStr
+          ? 1
+          : item1.programStartStr < item2.programStartStr
+            ? -1
+            : 0,
   );
 
   return mergedEpgData;

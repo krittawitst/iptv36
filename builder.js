@@ -8,12 +8,8 @@ const currentDatetimePlus7Hrs = new Date(currentEpochDatetime + 7 * 60 * 60 * 10
 const currentBkkDatetimeStr = currentDatetimePlus7Hrs.toISOString().slice(0, 16);
 
 const main = async () => {
-  // // prefetch epg data
-  // let epgDataPromise;
-
-  // if (true /*!process.env.VERCEL*/) {
-  //   epgDataPromise = getEpgData();
-  // }
+  // prefetch epg data
+  let epgDataPromise = getEpgData();
 
   // dynamically add streaming url
   // await streaming.dynamicallyAddStreamingUrlFromPPTV();
@@ -27,6 +23,10 @@ const main = async () => {
     let textStr = `#EXTM3U url-tvg="https://iptv36.vercel.app/epg.xml" refresh="3600"\n#\n`;
     textStr += `#   Homepage: http://iptv36.mooo.com/ (Find another version of IPTV playlists here)\n`;
     textStr += `#   Automatically update at: ${currentBkkDatetimeStr} ICT\n\n`;
+
+    // temporary for test license syntax
+    textStr += `#EXTINF:-1 tvg-chno="0" tvg-id="3HD.th" license_type="clearkey" license_key="9d76aea451d441a4913d4d70c4e586ab:051027a6ff54494b949ba792928e9008" group-title="Thai Free TV" tvg-logo="https://iptv36.vercel.app/logo/ch3.png",CH3 FHD
+https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/33/33.mpd\n\n`;
 
     // test all streaming simultaneously
     console.log(`\nChecking streaming url for playlist '${playlist.filename}'...`);
@@ -85,51 +85,49 @@ const main = async () => {
     console.log(`==> Created playlist '${playlist.filename}'`);
   }
 
-  //   // generate XMLTV EPG file
-  //   if (true /* !process.env.NETLIFY */) {
-  //     allActiveChannelKey = Array.from(new Set(allActiveChannelKey));
-  //     const epgData = await epgDataPromise;
+  // generate XMLTV EPG file
+  allActiveChannelKey = Array.from(new Set(allActiveChannelKey));
+  const epgData = await epgDataPromise;
 
-  //     let xmlHead = `<?xml version="1.0" encoding="UTF-8"?>
-  // <!DOCTYPE tv SYSTEM "xmltv.dtd">
-  // <tv>
-  // `;
-  //     let xmlTail = '</tv>';
+  let xmlHead = `<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tv SYSTEM "xmltv.dtd">
+<tv>
+`;
+  let xmlTail = '</tv>';
 
-  //     let availableTvgId = [];
+  let availableTvgId = [];
 
-  //     let xmlProgramBody = '';
-  //     for (let epg of epgData) {
-  //       if (!allActiveChannelKey.includes(epg.channelKey)) {
-  //         continue;
-  //       }
+  let xmlProgramBody = '';
+  for (let epg of epgData) {
+    if (!allActiveChannelKey.includes(epg.channelKey)) {
+      continue;
+    }
 
-  //       let tvgId = `iptv36.${epg.channelKey}`;
-  //       xmlProgramBody += `  <programme start="${epg.programStartStr}" `;
-  //       xmlProgramBody += epg.programEndStr ? `stop="${epg.programEndStr}" ` : '';
-  //       xmlProgramBody += `channel="${tvgId}">\n`;
-  //       xmlProgramBody += `    <title><![CDATA[${epg.programTitle}]]></title>\n`;
-  //       if (epg.programSubtitle) {
-  //         xmlProgramBody += `    <sub-title><![CDATA[${epg.programSubtitle}]]></sub-title>\n`;
-  //       }
-  //       if (epg.programDescription) {
-  //         xmlProgramBody += `    <desc><![CDATA[${epg.programDescription}]]></desc>\n`;
-  //       }
-  //       xmlProgramBody += `  </programme>\n`;
+    let tvgId = `iptv36.${epg.channelKey}`;
+    xmlProgramBody += `  <programme start="${epg.programStartStr}" `;
+    xmlProgramBody += epg.programEndStr ? `stop="${epg.programEndStr}" ` : '';
+    xmlProgramBody += `channel="${tvgId}">\n`;
+    xmlProgramBody += `    <title><![CDATA[${epg.programTitle}]]></title>\n`;
+    if (epg.programSubtitle) {
+      xmlProgramBody += `    <sub-title><![CDATA[${epg.programSubtitle}]]></sub-title>\n`;
+    }
+    if (epg.programDescription) {
+      xmlProgramBody += `    <desc><![CDATA[${epg.programDescription}]]></desc>\n`;
+    }
+    xmlProgramBody += `  </programme>\n`;
 
-  //       availableTvgId.push(tvgId);
-  //     }
+    availableTvgId.push(tvgId);
+  }
 
-  //     let xmlChannelBody = '';
-  //     for (let tvgId of new Set(availableTvgId)) {
-  //       xmlChannelBody += `  <channel id="${tvgId}">\n`;
-  //       xmlChannelBody += `    <display-name>${tvgId}</display-name>\n`;
-  //       xmlChannelBody += `  </channel>\n`;
-  //     }
+  let xmlChannelBody = '';
+  for (let tvgId of new Set(availableTvgId)) {
+    xmlChannelBody += `  <channel id="${tvgId}">\n`;
+    xmlChannelBody += `    <display-name>${tvgId}</display-name>\n`;
+    xmlChannelBody += `  </channel>\n`;
+  }
 
-  //     fs.writeFileSync('epg.xml', xmlHead + xmlChannelBody + xmlProgramBody + xmlTail, 'utf8');
-  //     console.log(`\n==> Created EPG 'epg.xml'`);
-  //   }
+  fs.writeFileSync('epg.xml', xmlHead + xmlChannelBody + xmlProgramBody + xmlTail, 'utf8');
+  console.log(`\n==> Created EPG 'epg.xml'`);
 };
 
 main();

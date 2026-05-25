@@ -13,11 +13,6 @@
       "destination": "https://iptv36.vercel.app/playlist-v3.m3u"
     },
     {
-      "source": "/epg.xml",
-      "destination": "https://iptv-epg.org/files/eb793d450e7e3040fb1be0642d95a2f3/epg-th.xml.gz",
-      "permanent": false
-    },
-    {
       "source": "/",
       "destination": "https://iptv36.mooo.com/"
     }

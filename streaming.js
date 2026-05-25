@@ -45,7 +45,7 @@ const streamingInfo = {
   tsports: {
     channelName: 'T-Sports',
     logo: 'https://iptv36.vercel.app/logo/tsports.png',
-    tvgId: 'TSPORT7.th',
+    // tvgId: 'TSPORT7.th',
     sources: [
       { url: 'https://udn-streamer1.cdn.3bbtv.com:8443/3bb/live/7/7.mpd' },
       { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=tsports', suffix: '[เสีย]' },
@@ -74,7 +74,7 @@ const streamingInfo = {
   tnn16: {
     channelName: 'TNN16',
     logo: 'https://iptv36.vercel.app/logo/tnn16.png',
-    tvgId: 'TNN24.th',
+    // tvgId: 'TNN24.th',
     sources: [
       { url: 'https://lb-gmmz.sky-cdn.com/gmm/tnn16.m3u8' },
       // { url: 'https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/16/16.mpd' },
@@ -101,7 +101,7 @@ const streamingInfo = {
   workpoint: {
     channelName: 'Workpoint TV',
     logo: 'https://iptv36.vercel.app/logo/workpoint.png',
-    tvgId: 'WORKPOINT.th',
+    // tvgId: 'WORKPOINT.th',
     sources: [
       {
         url: 'https://live-global-cdn-v02.sooplive.com/live-stmc-37/auth_master_playlist.m3u8?aid=.A32.pxqRXFPZNcY9Qg1.ewOJxxA0oDs8U-8CHLTO50HT6nUiCYyYyg_YfEFRdcralBB1ICQ_BcrqFQX8IacgdkIgznvzHcXB63ePFS6h9B-QjDlVl7ld68-kgRZwdID4DyxAnew9aOab3evF8d9MY-VpqCLyJI0IIrxAXf-EpYcUQXvqWvJVCfMQtfRB9nG0yY53JpH3CdYgAv2YgRiAm_K_RHr34ai-xWxIJdAXAA',
@@ -117,7 +117,7 @@ const streamingInfo = {
   true4u: {
     channelName: 'True4U',
     logo: 'https://iptv36.vercel.app/logo/true4u.png',
-    tvgId: 'TRUE4U.th',
+    // tvgId: 'TRUE4U.th',
     sources: [
       { url: 'https://iptv36.vercel.app/api/true.m3u8?channel=true4u', suffix: 'HD' },
       { url: 'https://lb-gmmz.sky-cdn.com/gmm/true24.m3u8' },
@@ -129,7 +129,7 @@ const streamingInfo = {
   gmm25: {
     channelName: 'GMM25',
     logo: 'https://iptv36.vercel.app/logo/gmm25.png',
-    tvgId: 'GMM.th',
+    // tvgId: 'GMM.th',
     sources: [
       {
         url: 'https://fastly.live.brightcove.com/6392745120112/ap-southeast-1/6415628290001/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJob3N0IjoicWN6dGF6LmVncmVzcy5wcHRpOHciLCJhY2NvdW50X2lkIjoiNjQxNTYyODI5MDAwMSIsImVobiI6ImZhc3RseS5saXZlLmJyaWdodGNvdmUuY29tIiwiaXNzIjoiYmxpdmUtcGxheWJhY2stc291cmNlLWFwaSIsInN1YiI6InBhdGhtYXB0b2tlbiIsImF1ZCI6WyI2NDE1NjI4MjkwMDAxIl0sImp0aSI6IjYzOTI3NDUxMjAxMTIifQ.w9Q_oqsE_WFClGF5tLVDtHnz5zfHHgNpumxVYNx4yYw/playlist-hls.m3u8',
@@ -144,7 +144,7 @@ const streamingInfo = {
   ch8: {
     channelName: 'CH8',
     logo: 'https://iptv36.vercel.app/logo/ch8.png',
-    tvgId: 'CH8.th',
+    // tvgId: 'CH8.th',
     sources: [
       { url: 'https://lb-gmmz.sky-cdn.com/gmm/ch8.m3u8', priority: 9 },
       { url: 'https://cco-streamer2.cdn.3bbtv.com:8443/3bb/live/27/27.mpd', priority: 8 },
@@ -156,7 +156,7 @@ const streamingInfo = {
   mono29: {
     channelName: 'MONO29',
     logo: 'https://iptv36.vercel.app/logo/mono29.png?v=3',
-    tvgId: 'MONO.th',
+    // tvgId: 'MONO.th',
     sources: [
       { url: 'https://monomax-uiripn.cdn.byteark.com/plain/th/playlist.m3u8', suffix: 'FHD' },
       { url: 'https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/29/29.mpd' },
@@ -167,7 +167,7 @@ const streamingInfo = {
   mono29soundtrack: {
     channelName: 'MONO29 Soundtrack',
     logo: 'https://iptv36.vercel.app/logo/mono29.png?v=3',
-    tvgId: 'MONO.th',
+    tvgId: 'mono29.iptv36',
     sources: [
       {
         url: 'https://monomax-uiripn.cdn.byteark.com/plain/st/playlist.m3u8',
@@ -194,7 +194,7 @@ const streamingInfo = {
   one: {
     channelName: 'ONE',
     logo: 'https://iptv36.vercel.app/logo/one.png',
-    tvgId: 'ONE.th',
+    // tvgId: 'ONE.th',
     sources: [
       {
         url: 'https://fastly.live.brightcove.com/6393158620112/ap-southeast-1/6415628290001/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJob3N0IjoicWN6dGF6LmVncmVzcy5wcHRpOHciLCJhY2NvdW50X2lkIjoiNjQxNTYyODI5MDAwMSIsImVobiI6ImZhc3RseS5saXZlLmJyaWdodGNvdmUuY29tIiwiaXNzIjoiYmxpdmUtcGxheWJhY2stc291cmNlLWFwaSIsInN1YiI6InBhdGhtYXB0b2tlbiIsImF1ZCI6WyI2NDE1NjI4MjkwMDAxIl0sImp0aSI6IjYzOTMxNTg2MjAxMTIifQ.Pv-kHDlJaV05HiJ2AQmS3PnV2ZQg7ovszKptAGg1EN0/playlist-hls.m3u8',
@@ -209,7 +209,7 @@ const streamingInfo = {
   thairath: {
     channelName: 'Thairath TV',
     logo: 'https://iptv36.vercel.app/logo/thairath.png',
-    tvgId: 'TRATH.th',
+    // tvgId: 'TRATH.th',
     sources: [
       {
         url: 'https://ssai-streaming.thairath.co.th/bamm-csai/720p/index.m3u8',
@@ -224,7 +224,7 @@ const streamingInfo = {
   ch3: {
     channelName: 'CH3',
     logo: 'https://iptv36.vercel.app/logo/ch3.png',
-    tvgId: '3HD.th',
+    // tvgId: '3HD.th',
     sources: [
       // { url: 'https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/33/33.mpd', suffix: 'FHD' },
       { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=ch3', priority: 1, suffix: '[เสีย]' },
@@ -234,7 +234,7 @@ const streamingInfo = {
   amarin: {
     channelName: 'Amarin TV',
     logo: 'https://iptv36.vercel.app/logo/amarin.png',
-    tvgId: 'AMARIN.th',
+    // tvgId: 'AMARIN.th',
     sources: [
       { url: 'https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/34/34.mpd', suffix: 'FHD' },
       { url: 'https://lb-gmmz.sky-cdn.com/gmm/amarin.m3u8', suffix: 'HD' },
@@ -245,7 +245,7 @@ const streamingInfo = {
   ch7: {
     channelName: 'CH7',
     logo: 'https://iptv36.vercel.app/logo/ch7.png',
-    tvgId: '7HD.th',
+    // tvgId: '7HD.th',
     sources: [
       {
         url: 'https://live-cdn.ch7.com/out/v1/eafeb02c55b64a15b278b1e66c7fc776/playlist_9.m3u8',
@@ -259,7 +259,7 @@ const streamingInfo = {
   pptv: {
     channelName: 'PPTV',
     logo: 'https://iptv36.vercel.app/logo/pptv.png',
-    tvgId: 'PPTV.th',
+    // tvgId: 'PPTV.th',
     sources: [
       { url: 'https://lb-gmmz.sky-cdn.com/gmm/pptv.m3u8', priority: 21, suffix: 'HD' },
       { url: 'https://www.livedoomovies.com:4431/02_PPTVHD_720p/playlist.m3u8', suffix: 'HD' },
