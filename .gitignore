@@ -1,4 +1,5 @@
 node_modules/*
 *.m3u
 *.xml
+*.xml.gz
 .vercel

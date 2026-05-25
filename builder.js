@@ -1,4 +1,5 @@
 const fs = require('fs');
+const zlib = require('zlib');
 const streaming = require('./streaming.js');
 const getEpgData = require('./epg.js');
 const allPlaylist = require('./playlist.js');
@@ -20,13 +21,9 @@ const main = async () => {
 
   // generate M3U PLAYLIST file
   for (let playlist of allPlaylist) {
-    let textStr = `#EXTM3U url-tvg="https://iptv36.vercel.app/epg.xml" refresh="3600"\n#\n`;
+    let textStr = `#EXTM3U url-tvg="https://iptv36.vercel.app/epg.xml.gz" refresh="3600"\n#\n`;
     textStr += `#   Homepage: http://iptv36.mooo.com/ (Find another version of IPTV playlists here)\n`;
     textStr += `#   Automatically update at: ${currentBkkDatetimeStr} ICT\n\n`;
-
-    // temporary for test license syntax
-    textStr += `#EXTINF:-1 tvg-chno="0" tvg-id="3HD.th" license_type="clearkey" license_key="9d76aea451d441a4913d4d70c4e586ab:051027a6ff54494b949ba792928e9008" group-title="Thai Free TV" tvg-logo="https://iptv36.vercel.app/logo/ch3.png",CH3 FHD
-https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/33/33.mpd\n\n`;
 
     // test all streaming simultaneously
     console.log(`\nChecking streaming url for playlist '${playlist.filename}'...`);
@@ -126,8 +123,14 @@ https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/33/33.mpd\n\n`;
     xmlChannelBody += `  </channel>\n`;
   }
 
-  fs.writeFileSync('epg.xml', xmlHead + xmlChannelBody + xmlProgramBody + xmlTail, 'utf8');
+  const xmlContent = xmlHead + xmlChannelBody + xmlProgramBody + xmlTail;
+  const compressedData = zlib.gzipSync(xmlContent);
+
+  fs.writeFileSync('epg.xml', xmlContent, 'utf8');
   console.log(`\n==> Created EPG 'epg.xml'`);
+
+  fs.writeFileSync('epg.xml.gz', compressedData);
+  console.log(`\n==> Created EPG 'epg.xml.gz'`);
 };
 
 main();

@@ -136,14 +136,29 @@ const getEpgDataFrom3bb = async () => {
 
   // process data
   let epgData = [];
+  let currentDatetime = new Date();
+  let currentDatetimePlus72Hrs = new Date(currentDatetime.getTime() + 72 * 3600 * 1000);
 
   for (const dataOfThisChannel of allData) {
     for (const item of dataOfThisChannel) {
+      // get program start now + 2 days
+      try {
+        let programStart = new Date(`${item.startTime.replace(/ /g, 'T')}+07:00`);
+        let programEnd = new Date(`${item.endTime.replace(/ /g, 'T')}+07:00`);
+        if (programEnd < currentDatetime || programStart > currentDatetimePlus72Hrs) {
+          continue;
+        }
+      } catch (error) {
+        console.log(error);
+        continue;
+      }
+
       let channelKey = channelIdToChannelKey[item.channelID];
       let programStartStr = item.startTime.replace(/-|:| /g, '') + ' +0700';
       let programEndStr = item.endTime.replace(/-|:| /g, '') + ' +0700';
       let programTitle = item.programName ? item.programName.trim() : 'No Program Name';
       let programDescription = undefined;
+
       epgData.push({
         programStartStr,
         programEndStr,

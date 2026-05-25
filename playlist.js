@@ -53,7 +53,6 @@ const channelListWithBackupChannel = [
   ['thaipbs'],
   ['thaipbs', 1],
   ['tv5'],
-  ['tv5', 1],
   ['tsports'],
   ['tptv'],
   ['nbtcentral'],

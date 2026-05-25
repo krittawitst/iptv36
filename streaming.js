@@ -37,7 +37,7 @@ const streamingInfo = {
     // tvgId: 'TV5.th',
     sources: [
       { url: 'https://639bc5877c5fe.streamlock.net/tv5hdlive/tv5hdlive/playlist.m3u8', suffix: 'FHD' },
-      { url: 'https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/5/5.mpd', suffix: 'FHD', priority: 29 },
+      // { url: 'https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/5/5.mpd', suffix: 'FHD', priority: 29 },
       { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=tv5', suffix: '[เสีย]' },
     ],
   },
@@ -47,7 +47,7 @@ const streamingInfo = {
     logo: 'https://iptv36.vercel.app/logo/tsports.png',
     // tvgId: 'TSPORT7.th',
     sources: [
-      { url: 'https://udn-streamer1.cdn.3bbtv.com:8443/3bb/live/7/7.mpd' },
+      { url: 'https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/7/7.mpd' },
       { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=tsports', suffix: '[เสีย]' },
     ],
   },
@@ -200,7 +200,7 @@ const streamingInfo = {
         url: 'https://fastly.live.brightcove.com/6393158620112/ap-southeast-1/6415628290001/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJob3N0IjoicWN6dGF6LmVncmVzcy5wcHRpOHciLCJhY2NvdW50X2lkIjoiNjQxNTYyODI5MDAwMSIsImVobiI6ImZhc3RseS5saXZlLmJyaWdodGNvdmUuY29tIiwiaXNzIjoiYmxpdmUtcGxheWJhY2stc291cmNlLWFwaSIsInN1YiI6InBhdGhtYXB0b2tlbiIsImF1ZCI6WyI2NDE1NjI4MjkwMDAxIl0sImp0aSI6IjYzOTMxNTg2MjAxMTIifQ.Pv-kHDlJaV05HiJ2AQmS3PnV2ZQg7ovszKptAGg1EN0/playlist-hls.m3u8',
         suffix: 'FHD',
       },
-      { url: 'https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/31/31.mpd', suffix: 'FHD' },
+      // { url: 'https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/31/31.mpd', suffix: 'FHD' },
       { url: 'https://lb-gmmz.sky-cdn.com/gmm/one.m3u8', suffix: 'HD' },
       { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=one', priority: 1, suffix: '[เสีย]' },
     ],
