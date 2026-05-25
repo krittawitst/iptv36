@@ -167,7 +167,7 @@ const streamingInfo = {
   mono29soundtrack: {
     channelName: 'MONO29 Soundtrack',
     logo: 'https://iptv36.vercel.app/logo/mono29.png?v=3',
-    tvgId: 'mono29.iptv36',
+    tvgId: 'iptv36.mono29',
     sources: [
       {
         url: 'https://monomax-uiripn.cdn.byteark.com/plain/st/playlist.m3u8',

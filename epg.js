@@ -157,7 +157,7 @@ const getEpgDataFrom3bb = async () => {
       let programStartStr = item.startTime.replace(/-|:| /g, '') + ' +0700';
       let programEndStr = item.endTime.replace(/-|:| /g, '') + ' +0700';
       let programTitle = item.programName ? item.programName.trim() : 'No Program Name';
-      let programDescription = undefined;
+      let programDescription = 'from 3BB'; // undefined;
 
       epgData.push({
         programStartStr,
@@ -176,6 +176,11 @@ const getEpgDataFromTrueId = async () => {
   console.log('Fetching epg data from trueID...');
 
   const channelSlugToChannelKey = {
+    nbt: 'nbt',
+    ch5: 'tv5',
+    't-sports-7-sd': 'tsports',
+    workpointtv: 'workpoint',
+    'pptv-hd': 'pptv',
     truepremierfootballhd1: 'premier1',
     truepremierfootballhd2: 'premier2',
     truepremierfootballhd3: 'premier3',
@@ -230,6 +235,8 @@ const getEpgDataFromTrueId = async () => {
     if (pageProps === null || pageProps.channelSlug === undefined) continue;
 
     const channelKey = channelSlugToChannelKey[pageProps.channelSlug];
+    if (!channelKey) continue;
+
     for (const program of pageProps.epgList) {
       if (program.status === false) {
         continue;
@@ -237,7 +244,8 @@ const getEpgDataFromTrueId = async () => {
       const programStartStr = `${program.start_date.slice(0, 19).replace(/-|:|T/g, '')} +0000`;
       const programEndStr = `${program.end_date.slice(0, 19).replace(/-|:|T/g, '')} +0000`;
       const programTitle = program.title ? program.title.trim() : 'No Program Name';
-      const programDescription = program.ep_name || (program.info && program.info.synopsis_th) || '';
+      let programDescription = (program.info && program.info.synopsis_th) || '';
+      programDescription = programDescription ? `${programDescription} (from trueID)` : 'from trueID';
       epgData.push({
         programStartStr,
         programEndStr,
@@ -264,17 +272,12 @@ const getEpgData = async () => {
   ]);
 
   let mergedEpgData = [...epgDataFromNbtc, ...epgDataFrom3bb, ...epgDataFromTrueId];
-  mergedEpgData = mergedEpgData.sort((item1, item2) =>
-    item1.channelKey > item2.channelKey
-      ? 1
-      : item1.channelKey < item2.channelKey
-        ? -1
-        : 0 || item1.programStartStr > item2.programStartStr
-          ? 1
-          : item1.programStartStr < item2.programStartStr
-            ? -1
-            : 0,
-  );
+  mergedEpgData = mergedEpgData.sort((item1, item2) => {
+    const channelCompare = item1.channelKey.localeCompare(item2.channelKey);
+    if (channelCompare !== 0) return channelCompare;
+
+    return item1.programStartStr.localeCompare(item2.programStartStr);
+  });
 
   return mergedEpgData;
 };
