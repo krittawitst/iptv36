@@ -168,7 +168,7 @@ const streamingInfo = {
         suffix: 'FHD',
         options: { userAgent: defaultUserAgent },
       },
-      // { url: 'https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/29/29.mpd' },
+      { url: 'https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/29/29.mpd' },
       { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=mono29', priority: 1, suffix: '[เสีย]' },
     ],
   },
@@ -280,10 +280,7 @@ const streamingInfo = {
     // tvgId: 'beINSports1Thailand.th',
     groupName: 'Sport',
     sources: [
-      {
-        url: 'https://otte.live.fly.ww.aiv-cdn.net/syd-nitro/live/clients/dash/enc/ghwcl6hv68/out/v1/83536910d8034e9b9895a20fbe1c1687/cenc.mpd',
-        suffix: 'FHD',
-      },
+      ,
       { url: 'http://thangap.ddns.net:3000/inw/bein1true/steamball2026.m3u8?token=I8gxAM7dIC2liz05', suffix: 'HD' },
     ],
   },
