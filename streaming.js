@@ -159,11 +159,14 @@ const streamingInfo = {
   },
 
   mono29: {
-    channelName: 'MONO29',
-    logo: 'https://iptv36.vercel.app/logo/mono29.png?v=3',
+    channelName: 'Monomax Sports',
+    logo: 'https://iptv36.vercel.app/logo/monomax.png',
     // tvgId: 'MONO.th',
     sources: [
-      { url: 'https://monomax-uiripn.cdn.byteark.com/plain/th/playlist.m3u8', suffix: 'FHD' },
+      {
+        url: 'https://live-tv.monomax.me/v1/019d38969c6c150b585a1f99efcb45/019d38983eea150b585a1f99efcb48/main.m3u8',
+        suffix: 'FHD',
+      },
       { url: 'https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/29/29.mpd' },
       { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=mono29', priority: 1, suffix: '[เสีย]' },
     ],
@@ -171,14 +174,9 @@ const streamingInfo = {
 
   mono29soundtrack: {
     channelName: 'MONO29 Soundtrack',
-    logo: 'https://iptv36.vercel.app/logo/mono29.png?v=3',
+    logo: 'https://iptv36.vercel.app/logo/monomax.png',
     tvgId: 'iptv36.mono29',
-    sources: [
-      {
-        url: 'https://monomax-uiripn.cdn.byteark.com/plain/st/playlist.m3u8',
-        suffix: 'FHD',
-      },
-    ],
+    sources: [],
   },
 
   mcot: {
