@@ -37,6 +37,7 @@ const streamingInfo = {
     // tvgId: 'TV5.th',
     sources: [
       { url: 'https://639bc5877c5fe.streamlock.net/tv5hdlive/tv5hdlive/playlist.m3u8', suffix: 'FHD' },
+      { url: 'https://lb-gmmz.sky-cdn.com/gmm/ch5.m3u8', suffix: 'HD' },
       // { url: 'https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/5/5.mpd', suffix: 'FHD', priority: 29 },
       { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=tv5', suffix: '[เสีย]' },
     ],
@@ -47,7 +48,8 @@ const streamingInfo = {
     logo: 'https://iptv36.vercel.app/logo/tsports.png',
     // tvgId: 'TSPORT7.th',
     sources: [
-      { url: 'https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/7/7.mpd' },
+      { url: 'https://lb-gmmz.sky-cdn.com/gmm/tsport7.m3u8' },
+      // { url: 'https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/7/7.mpd' },
       { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=tsports', suffix: '[เสีย]' },
     ],
   },
@@ -56,7 +58,10 @@ const streamingInfo = {
     channelName: 'TPTV',
     logo: 'https://iptv36.vercel.app/logo/tptv.png',
     // tvgId: 'TPTV',
-    sources: [{ url: 'https://tv-live.tpchannel.org/live/tv_1080p.m3u8?vhost=tv-live.tpchannel.org', suffix: 'FHD' }],
+    sources: [
+      { url: 'https://tv-live.tpchannel.org/live/tv_1080p.m3u8?vhost=tv-live.tpchannel.org', suffix: 'FHD' },
+      { url: 'https://lb-gmmz.sky-cdn.com/gmm/tptv.m3u8' },
+    ],
   },
 
   nbtcentral: {
@@ -78,7 +83,7 @@ const streamingInfo = {
     sources: [
       { url: 'https://lb-gmmz.sky-cdn.com/gmm/tnn16.m3u8' },
       // { url: 'https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/16/16.mpd' },
-      // { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=tnn16', priority: 1, suffix: '[เสีย]' },
+      { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=tnn16', priority: 1, suffix: '[เสีย]' },
     ],
   },
 
@@ -104,7 +109,7 @@ const streamingInfo = {
     // tvgId: 'WORKPOINT.th',
     sources: [
       {
-        url: 'https://live-global-cdn-v02.sooplive.com/live-stmc-37/auth_master_playlist.m3u8?aid=.A32.pxqRXFPZNcY9Qg1.ewOJxxA0oDs8U-8CHLTO50HT6nUiCYyYyg_YfEFRdcralBB1ICQ_BcrqFQX8IacgdkIgznvzHcXB63ePFS6h9B-QjDlVl7ld68-kgRZwdID4DyxAnew9aOab3evF8d9MY-VpqCLyJI0IIrxAXf-EpYcUQXvqWvJVCfMQtfRB9nG0yY53JpH3CdYgAv2YgRiAm_K_RHr34ai-xWxIJdAXAA',
+        url: 'https://live-global-cdn-v02.sooplive.com/live-stmc-31/auth_master_playlist.m3u8?aid=.A32.pxqRXFPZNcY9Qg1.1nYZjBQixHPSFqYgWnak1h3klpff9ckbdqSDPYCoZ-9X32SQq_Cipu9uylawNwPiAOm31LMbtezQlEZw34Fjw2rp8eNhOgxzDgXIupJnyDduHZLkGuoLMFz7wviTO16YiY2jCf8S1qQrCYAJ6Df63Eu-XHeGxl-q2pEiR00aHGMJt89fhwhsLCl4ZFRvWzYDK-myB3ZTk26Q3Bq3kmV4sg',
         suffix: 'FHD',
       },
       { url: 'https://lb-gmmz.sky-cdn.com/gmm/workpoint.m3u8', priority: 9 },
@@ -182,6 +187,7 @@ const streamingInfo = {
     // tvgId: 'MCOT',
     sources: [
       { url: 'https://cco-streamer2.cdn.3bbtv.com:8443/3bb/live/30/30.mpd', suffix: 'FHD', priority: 35 },
+      { url: 'https://lb-gmmz.sky-cdn.com/gmm/mcot.m3u8', suffix: 'HD' },
       {
         url: 'https://mcothd-streaming-edge-cdn.mcot.net/tencentmcot/smil:tencentmcot.smil/playlist.m3u8',
         suffix: 'FHD',
@@ -227,6 +233,7 @@ const streamingInfo = {
     // tvgId: '3HD.th',
     sources: [
       // { url: 'https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/33/33.mpd', suffix: 'FHD' },
+      { url: 'https://lb-gmmz.sky-cdn.com/gmm/ch3.m3u8', suffix: 'HD' },
       { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=ch3', priority: 1, suffix: '[เสีย]' },
     ],
   },
@@ -252,6 +259,7 @@ const streamingInfo = {
         suffix: 'FHD',
         options: { referer: 'https://www.ch7.com/' },
       },
+      { url: 'https://lb-gmmz.sky-cdn.com/gmm/ch7.m3u8', suffix: 'HD' },
       { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=ch7', priority: 1, suffix: '[เสีย]' },
     ],
   },
@@ -272,7 +280,13 @@ const streamingInfo = {
     logo: 'https://i.imgur.com/Vtk2cGI.png',
     // tvgId: 'beINSports1Thailand.th',
     groupName: 'Sport',
-    sources: [],
+    sources: [
+      {
+        url: 'https://otte.live.fly.ww.aiv-cdn.net/syd-nitro/live/clients/dash/enc/ghwcl6hv68/out/v1/83536910d8034e9b9895a20fbe1c1687/cenc.mpd',
+        suffix: 'FHD',
+      },
+      { url: 'http://thangap.ddns.net:3000/inw/bein1true/steamball2026.m3u8?token=I8gxAM7dIC2liz05', suffix: 'HD' },
+    ],
   },
 
   bein2: {

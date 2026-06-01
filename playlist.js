@@ -5,9 +5,9 @@ const playlistV1 = {
     ['one', 1],
     ['nbt'],
     ['thaipbs'],
-    ['blank', 4],
+    ['true4u', 1],
     ['tv5'],
-    ['blank', 6],
+    ['pptv', 1],
     ['tsports'],
     ['ch8', 1],
     ['mcot', 1],
@@ -15,23 +15,23 @@ const playlistV1 = {
 
     // 11-20
     ['nbtcentral'],
-    ['blank', 12],
-    ['blank', 13],
-    ['blank', 14],
-    ['blank', 15],
+    ['thairath', 1],
+    ['workpoint', 1],
+    ['amarin', 1],
+    ['ch7', 1],
     ['tnn16'],
-    ['blank', 17],
+    ['true4u', 1],
     ['blank', 18],
-    ['blank', 19],
-    ['blank', 20],
+    ['mono29', 1],
+    ['tptv', 1],
 
     // 21-30
-    ['blank', 21],
+    ['nation', 1],
     ['nation'],
     ['workpoint'],
     ['true4u'],
     ['gmm25'],
-    ['blank', 26],
+    ['gmm25', 1],
     ['ch8'],
     ['mono29soundtrack'],
     ['mono29'],
@@ -51,13 +51,16 @@ const channelListWithBackupChannel = [
   // 1-10
   ['nbt'],
   ['thaipbs'],
-  ['thaipbs', 1],
   ['tv5'],
+  ['tv5', 1],
   ['tsports'],
   ['tptv'],
+  ['tptv', 1],
   ['nbtcentral'],
   ['tnn16'],
   ['nation'],
+
+  // 11-20
   ['nation', 1],
   ['workpoint'],
   ['workpoint', 1],
@@ -65,11 +68,11 @@ const channelListWithBackupChannel = [
   ['true4u', 1],
   ['gmm25'],
   ['gmm25', 1],
-
-  // 11-20
   ['ch8'],
   ['ch8', 1],
   ['mono29'],
+
+  // 21-30
   ['mono29', 1],
   ['mono29soundtrack'],
   ['mcot'],
@@ -78,8 +81,10 @@ const channelListWithBackupChannel = [
   ['one', 1],
   ['thairath'],
   ['thairath', 1],
-  // ['ch3'],
+  ['ch3'],
   ['amarin'],
+
+  // 31-34
   ['amarin', 1],
   ['ch7'],
   ['pptv'],
@@ -96,7 +101,7 @@ const playlistV3 = {
   channelList: [
     ...channelListWithBackupChannel,
 
-    // ['bein1'],
+    ['bein1'],
     // ['bein3'],
     // ['monomax1'],
     // ['monomax2'],

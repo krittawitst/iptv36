@@ -141,7 +141,7 @@ const getEpgDataFrom3bb = async () => {
 
   for (const dataOfThisChannel of allData) {
     for (const item of dataOfThisChannel) {
-      // get program start now + 2 days
+      // get program start now + 3 days
       try {
         let programStart = new Date(`${item.startTime.replace(/ /g, 'T')}+07:00`);
         let programEnd = new Date(`${item.endTime.replace(/ /g, 'T')}+07:00`);
@@ -181,13 +181,13 @@ const getEpgDataFromTrueId = async () => {
     't-sports-7-sd': 'tsports',
     workpointtv: 'workpoint',
     'pptv-hd': 'pptv',
-    truepremierfootballhd1: 'premier1',
-    truepremierfootballhd2: 'premier2',
-    truepremierfootballhd3: 'premier3',
-    truepremierfootballhd4: 'premier4',
-    truepremierfootballhd5: 'premier5',
-    'truesport-hd': 'truesportshd1',
-    'truesport-hd-2': 'truesportshd2',
+    // truepremierfootballhd1: 'premier1',
+    // truepremierfootballhd2: 'premier2',
+    // truepremierfootballhd3: 'premier3',
+    // truepremierfootballhd4: 'premier4',
+    // truepremierfootballhd5: 'premier5',
+    // 'truesport-hd': 'truesportshd1',
+    // 'truesport-hd-2': 'truesportshd2',
   };
 
   // send request
@@ -232,7 +232,7 @@ const getEpgDataFromTrueId = async () => {
   const epgData = [];
 
   for (const pageProps of allPageProps) {
-    if (pageProps === null || pageProps.channelSlug === undefined) continue;
+    if (pageProps === null || pageProps === undefined || pageProps.channelSlug === undefined) continue;
 
     const channelKey = channelSlugToChannelKey[pageProps.channelSlug];
     if (!channelKey) continue;
