@@ -100,7 +100,7 @@ const playlistV3 = {
   channelList: [
     ...channelListWithBackupChannel,
 
-    ['bein1'],
+    // ['bein1'],
     // ['bein3'],
     // ['monomax1'],
     // ['monomax2'],

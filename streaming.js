@@ -308,7 +308,7 @@ const streamingInfo = {
     groupName: 'Sport',
     sources: [
       {
-        url: 'http://thangap.ddns.net:3000/keela4.m3u8?q=monomax1&token=cDkR938Yt0I03wKx',
+        url: 'http://thangap.ddns.net:3000/keela4.m3u8?q=monomax1&token=KHdQ0ulFnJymJe4Q',
         options: { userAgent: vlcUserAgent },
       },
     ],
