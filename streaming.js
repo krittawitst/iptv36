@@ -166,8 +166,9 @@ const streamingInfo = {
       {
         url: 'https://live-tv.monomax.me/v1/019d38969c6c150b585a1f99efcb45/019d38983eea150b585a1f99efcb48/main.m3u8',
         suffix: 'FHD',
+        options: { userAgent: defaultUserAgent },
       },
-      { url: 'https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/29/29.mpd' },
+      // { url: 'https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/29/29.mpd' },
       { url: 'https://iptv36.vercel.app/nosignal.m3u8?ch=mono29', priority: 1, suffix: '[เสีย]' },
     ],
   },
@@ -574,9 +575,9 @@ const testUrl = async (url, options = {}) => {
   if (
     process.env.VERCEL &&
     (url.includes('ch7.com') || // Geo Restrict
-      url.includes('pptv36-9h0yba.cdn.byteark.com') || // Geo Restrictt
+      url.includes('thangap.ddns.net') ||
       url.includes('lb-gmmz.sky-cdn.com') ||
-      url.includes('prsmedia') ||
+      url.includes('monomax.me') ||
       url.includes('dailymotion.com') ||
       url.includes('iptv36.vercel.app/api/'))
   ) {
