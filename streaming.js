@@ -164,7 +164,7 @@ const streamingInfo = {
     // tvgId: 'MONO.th',
     sources: [
       {
-        url: 'https://live-tv.monomax.me/v1/019d38969c6c150b585a1f99efcb45/019d38983eea150b585a1f99efcb48/main.m3u8',
+        url: 'https://live-tv.monomax.me/v1/019d38969c6c150b585a1f99efcb45/019e96a14f12150b585a122d294a26/main.m3u8',
         suffix: 'FHD',
         options: { userAgent: defaultUserAgent },
       },
