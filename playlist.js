@@ -2,7 +2,7 @@ const playlistV1 = {
   filename: 'playlist-v1.m3u',
   channelList: [
     // 1-10
-    ['one', 1],
+    ['blank', 1],
     ['nbt'],
     ['thaipbs'],
     ['true4u', 1],
@@ -52,41 +52,31 @@ const channelListWithBackupChannel = [
   ['nbt'],
   ['thaipbs'],
   ['tv5'],
-  ['tv5', 1],
   ['tsports'],
   ['tptv'],
-  ['tptv', 1],
-  ['nbtcentral'],
   ['tnn16'],
   ['nation'],
-
-  // 11-20
   ['nation', 1],
   ['workpoint'],
   ['workpoint', 1],
+
+  // 11-20
   ['true4u'],
-  ['true4u', 1],
   ['gmm25'],
-  ['gmm25', 1],
   ['ch8'],
   ['ch8', 1],
   ['mono29'],
-
-  // 21-30
-  ['mono29', 1],
   ['mcot'],
   ['mcot', 1],
   ['one'],
-  ['one', 1],
   ['thairath'],
   ['thairath', 1],
+
+  // 21-30
   ['ch3'],
   ['amarin'],
   ['amarin', 1],
-
-  // 31-34
   ['ch7'],
-  ['ch7', 1],
   ['pptv'],
 ];
 
